@@ -17,7 +17,7 @@
 					'dsn'       => $db['type'].':host='.$db['hostname'].';port='.$db['hostport'].';dbname='.$db['database'],
 					'user'      => $db['username'],
 					'password'  => $db['password'],
-					'table'     => 'police_log4php'
+					'table'     => 'base_log4php'
 				)
 			)
 		)
