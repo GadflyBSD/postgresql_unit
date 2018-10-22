@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Administrative-divisions-of-China/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +75,7 @@
           <entry key="domicile_view" value="5" />
           <entry key="gray_personnel" value="2" />
           <entry key="json" value="2" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="splitaa" value="1" />
           <entry key="splitab" value="1" />
           <entry key="sql" value="14" />
@@ -87,7 +88,7 @@
         <counts>
           <entry key="Database Element" value="43" />
           <entry key="JSON" value="2" />
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="SQL" value="5" />
           <entry key="Scratch" value="9" />
@@ -95,7 +96,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="730" />
+          <entry key="md" value="750" />
           <entry key="sql" value="5665" />
           <entry key="txt" value="8" />
           <entry key="villages-ab" value="1" />
@@ -104,7 +105,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="718" />
+          <entry key="Markdown" value="738" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="3676" />
           <entry key="Scratch" value="2001" />
@@ -136,12 +137,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="426">
+                <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="52" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="720">
-                <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+              <first_editor relative-caret-position="132">
+                <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               </first_editor>
               <second_editor />
             </state>
@@ -172,6 +185,7 @@
         <option value="$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
         <option value="$PROJECT_DIR$/Administrative-divisions-of-China/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -309,18 +323,18 @@
       <workItem from="1539915476609" duration="4045000" />
       <workItem from="1539959135965" duration="2079000" />
       <workItem from="1540173982844" duration="152000" />
-      <workItem from="1540174156783" duration="8866000" />
+      <workItem from="1540174156783" duration="9340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49537000" />
+    <option name="totallyTimeSpent" value="50011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15814444" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15814444" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -331,7 +345,7 @@
       <window_info id="Redis Servers" order="8" weight="0.32961783" />
       <window_info id="RestServices" order="9" weight="0.32889584" />
       <window_info id="Remote Host" order="10" weight="0.32889584" />
-      <window_info active="true" id="JSON Viewer" order="11" visible="true" weight="0.32841328" />
+      <window_info id="JSON Viewer" order="11" weight="0.32841328" />
       <window_info id="Ant Build" order="12" weight="0.25" />
       <window_info id="Maven Projects" order="13" weight="0.32889584" />
       <window_info anchor="bottom" id="Messages" />
@@ -433,9 +447,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="426">
+            <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="52" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="720">
-            <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <first_editor relative-caret-position="132">
+            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           </first_editor>
           <second_editor />
         </state>

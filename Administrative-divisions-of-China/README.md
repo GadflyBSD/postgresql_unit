@@ -75,4 +75,5 @@ SELECT logic_build_people(json_build_object(
 ## 四、获取方法
 ```git
 git clone https://github.com/GadflyBSD/postgresql_unit.git
+cd postgresql_unit/Administrative-divisions-of-China
 ```
