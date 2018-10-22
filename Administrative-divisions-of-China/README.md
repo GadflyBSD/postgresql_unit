@@ -71,3 +71,8 @@ SELECT logic_build_people(json_build_object(
     'feature', '指定生成者的身体特征，默认：随机生成'
 ));
 ```
+
+## 四、获取方法
+```git
+git clone https://github.com/GadflyBSD/postgresql_unit.git
+```
