@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/gadflybsd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/areas.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/areas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/cities.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/cities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/data.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/pc-code.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/pc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/pca-code.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/pca.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/pcas-code.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/pcas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/provinces.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/provinces.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/streets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/streets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/villages.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/data/villages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="887b9cd6-7fd8-4293-9465-31d781af6906">
+        <node key="postgres">
+          <node key="public" />
+        </node>
+      </node>
+    </checked>
+    <expanded>
+      <node key="887b9cd6-7fd8-4293-9465-31d781af6906">
+        <node key="postgres" />
+      </node>
+    </expanded>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2011404867">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="base_city" value="3" />
+          <entry key="base_dividion_view" value="2" />
+          <entry key="base_province" value="3" />
+          <entry key="base_street" value="2" />
+          <entry key="base_village" value="7" />
+          <entry key="csv" value="7" />
+          <entry key="dividion_area" value="2" />
+          <entry key="dividion_city" value="3" />
+          <entry key="dividion_province" value="2" />
+          <entry key="dividion_street" value="6" />
+          <entry key="dividion_view" value="3" />
+          <entry key="dividion_village" value="3" />
+          <entry key="domicile_view" value="5" />
+          <entry key="gray_personnel" value="2" />
+          <entry key="json" value="2" />
+          <entry key="md" value="1" />
+          <entry key="splitaa" value="1" />
+          <entry key="splitab" value="1" />
+          <entry key="sql" value="14" />
+          <entry key="villages-aa" value="4" />
+          <entry key="villages-ab" value="1" />
+          <entry key="villages-ac" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Database Element" value="43" />
+          <entry key="JSON" value="2" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="SQL" value="5" />
+          <entry key="Scratch" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="md" value="700" />
+          <entry key="sql" value="5665" />
+          <entry key="txt" value="8" />
+          <entry key="villages-ab" value="1" />
+          <entry key="villages-ac" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="688" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="SQL" value="3676" />
+          <entry key="Scratch" value="2001" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-426">
+              <caret line="464" column="24" selection-start-line="464" selection-start-column="8" selection-end-line="464" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="256" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="338">
+                <caret line="57" column="18" lean-forward="true" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>base_</find>
+      <find>、</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>dividion_</replace>
+      <replace>', '</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Administrative-divisions-of-China/provinces.pgsql.sql" />
+        <option value="$PROJECT_DIR$/Administrative-divisions-of-China/data/split/villages-ab" />
+        <option value="$PROJECT_DIR$/Administrative-divisions-of-China/data/split/villages-ac" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
+        <option value="$PROJECT_DIR$/Administrative-divisions-of-China/README.md" />
+        <option value="$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1440" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="NBKnowledgePane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
+              <item name="Administrative-divisions-of-China" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539919416137" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="PostgreSQL" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Administrative-divisions-of-China" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SQLPlugin.ProjectConfiguration">
+    <queries />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="" />
+      <created>1539832447669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539832447669</updated>
+      <workItem from="1539832449198" duration="222000" />
+      <workItem from="1539832767396" duration="32000" />
+      <workItem from="1539832816985" duration="22493000" />
+      <workItem from="1539864251208" duration="6524000" />
+      <workItem from="1539873636160" duration="3519000" />
+      <workItem from="1539912604031" duration="271000" />
+      <workItem from="1539912912025" duration="1334000" />
+      <workItem from="1539915476609" duration="4045000" />
+      <workItem from="1539959135965" duration="2079000" />
+      <workItem from="1540173982844" duration="152000" />
+      <workItem from="1540174156783" duration="8335000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="49006000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15814444" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Structure" order="6" weight="0.24973376" />
+      <window_info id="Database" order="7" weight="0.09014233" />
+      <window_info id="Redis Servers" order="8" weight="0.32961783" />
+      <window_info id="RestServices" order="9" weight="0.32889584" />
+      <window_info id="Remote Host" order="10" weight="0.32889584" />
+      <window_info id="JSON Viewer" order="11" weight="0.32841328" />
+      <window_info id="Ant Build" order="12" weight="0.25" />
+      <window_info id="Maven Projects" order="13" weight="0.32889584" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893504" weight="0.32862905" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" weight="0.3296371" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50106496" side_tool="true" weight="0.32944345" />
+      <window_info anchor="bottom" id="SQL" order="9" weight="0.3296371" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32997987" />
+      <window_info anchor="bottom" id="TypeScript" order="12" weight="0.3296371" />
+      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49946752" weight="0.32862905" />
+      <window_info anchor="bottom" id="REST Client" order="14" weight="0.3296371" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
+        <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/provinces.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_province" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_street" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_dividion_view" />
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/villages.json">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/splitaa" />
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/splitab" />
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/split/villages-ab" />
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/split/villages-ac" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_village" />
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/areas.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="dbSrc:///40611657/887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/routine/logic_build_people@(json).sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="49" column="10" lean-forward="true" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/villages.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-198625">
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/split/villages-aa" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_village" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_province" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/dividion_view" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_city" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_area" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_street" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/domicile_view" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="256" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="338">
+            <caret line="57" column="18" lean-forward="true" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="464" column="24" selection-start-line="464" selection-start-column="8" selection-end-line="464" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
