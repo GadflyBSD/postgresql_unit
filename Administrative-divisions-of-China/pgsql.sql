@@ -135,7 +135,7 @@ COMMENT ON COLUMN domicile_view.domicile IS '户籍所在地';
 /**
  # 判断给定参数所代表的年是否为闰年
  */
-DROP FUNCTION IF EXISTS func_is_leap_year(integer);
+DROP FUNCTION IF EXISTS func_is_leap_year(INTEGER);
 CREATE OR REPLACE FUNCTION func_is_leap_year(IN year INTEGER) RETURNS BOOLEAN
 AS $$
 BEGIN
@@ -150,7 +150,7 @@ $$ LANGUAGE plpgsql;
 /**
  # 判断给定参数所代表的年范围里面有多少个闰年
  */
-DROP FUNCTION IF EXISTS func_have_leap_year(integer,integer);
+DROP FUNCTION IF EXISTS func_have_leap_year(INTEGER, INTEGER);
 CREATE OR REPLACE FUNCTION func_have_leap_year(IN start_year INTEGER, end_year INTEGER) RETURNS INTEGER
 AS $$
 DECLARE
@@ -180,6 +180,7 @@ $$ LANGUAGE plpgsql;
 /**
  # 身份证号码校验
  */
+DROP FUNCTION IF EXISTS func_verificate_card_number(VARCHAR);
 CREATE OR REPLACE FUNCTION func_verificate_card_number(IN card VARCHAR) RETURNS JSON
 AS $$
 DECLARE
@@ -212,7 +213,7 @@ $$ LANGUAGE plpgsql;
 /**
  # 随机概率函数
  */
-DROP FUNCTION  func_random_percent(IN percents JSON);
+DROP FUNCTION IF EXISTS func_random_percent(JSON);
 CREATE OR REPLACE FUNCTION func_random_percent(IN percents JSON) RETURNS JSON
 AS $$
 DECLARE
@@ -232,7 +233,7 @@ $$ LANGUAGE plpgsql;
 /**
  # 按需生成一个虚拟个人信息存储过程逻辑
  */
-DROP FUNCTION  logic_build_people(IN percents JSON);
+DROP FUNCTION IF EXISTS logic_build_people(JSON);
 CREATE OR REPLACE FUNCTION logic_build_people(IN people JSON) RETURNS JSON
 AS $$
 DECLARE
