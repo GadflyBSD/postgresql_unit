@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/foreign_redis_procedure/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log4&amp;exception/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log4&amp;exception/pgsql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/custom/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/custom/Logs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,14 +57,15 @@
     <session id="-2011404867">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,11 +84,15 @@
           <entry key="dividion_village" value="3" />
           <entry key="domicile_view" value="5" />
           <entry key="gray_personnel" value="2" />
+          <entry key="inc" value="1" />
           <entry key="json" value="2" />
-          <entry key="md" value="6" />
+          <entry key="md" value="11" />
+          <entry key="module" value="1" />
+          <entry key="php" value="4" />
+          <entry key="php5" value="2" />
           <entry key="splitaa" value="1" />
           <entry key="splitab" value="1" />
-          <entry key="sql" value="15" />
+          <entry key="sql" value="16" />
           <entry key="villages-aa" value="4" />
           <entry key="villages-ab" value="1" />
           <entry key="villages-ac" value="1" />
@@ -89,16 +102,19 @@
         <counts>
           <entry key="Database Element" value="43" />
           <entry key="JSON" value="2" />
-          <entry key="Markdown" value="6" />
+          <entry key="Markdown" value="11" />
+          <entry key="PHP" value="8" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="SQL" value="6" />
+          <entry key="SQL" value="7" />
           <entry key="Scratch" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="764" />
-          <entry key="sql" value="5666" />
+          <entry key="inc" value="1" />
+          <entry key="md" value="855" />
+          <entry key="php" value="7" />
+          <entry key="sql" value="5669" />
           <entry key="txt" value="8" />
           <entry key="villages-ab" value="1" />
           <entry key="villages-ac" value="1" />
@@ -106,9 +122,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="752" />
+          <entry key="Markdown" value="843" />
+          <entry key="PHP" value="8" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="SQL" value="3677" />
+          <entry key="SQL" value="3680" />
           <entry key="Scratch" value="2001" />
         </counts>
       </usages-collector>
@@ -116,16 +133,21 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/README.md">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/log4&amp;exception/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
+            <state split_layout="SPLIT">
               <first_editor>
-                <caret column="2" selection-start-column="2" selection-end-column="30" />
+                <caret column="34" selection-start-column="34" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -133,20 +155,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="927">
-              <caret line="496" column="20" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="132">
-                <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <first_editor relative-caret-position="110">
+                <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="35" />
               </first_editor>
               <second_editor />
             </state>
@@ -159,10 +172,12 @@
     <findStrings>
       <find>base_</find>
       <find>、</find>
+      <find>&quot;public&quot;.&quot;base_</find>
     </findStrings>
     <replaceStrings>
       <replace>dividion_</replace>
       <replace>', '</replace>
+      <replace>public.base_</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -177,9 +192,15 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
         <option value="$PROJECT_DIR$/Administrative-divisions-of-China/README.md" />
         <option value="$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql" />
-        <option value="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" />
         <option value="$PROJECT_DIR$/foreign_redis_procedure/README.md" />
+        <option value="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" />
+        <option value="$PROJECT_DIR$/log4&amp;exception/pgsql.sql" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.inc" />
+        <option value="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/Handler.php" />
+        <option value="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/Logs.php" />
+        <option value="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/app.php" />
+        <option value="$PROJECT_DIR$/log4&amp;exception/README.md" />
       </list>
     </option>
   </component>
@@ -201,6 +222,12 @@
       <select />
     </treeState>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_CLASS_LAST_EXTENSION" value="php5" />
+  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="1440" />
     <option name="width" value="1920" />
@@ -220,14 +247,14 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="NBKnowledgePane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,10 +267,18 @@
               <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
               <item name="foreign_redis_procedure" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
+              <item name="log4&amp;exception" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="NBKnowledgePane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,7 +290,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539919416137" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540190498315" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="PostgreSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
@@ -269,11 +304,15 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Administrative-divisions-of-China" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/custom" />
+      <recent name="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -317,18 +356,21 @@
       <workItem from="1539915476609" duration="4045000" />
       <workItem from="1539959135965" duration="2079000" />
       <workItem from="1540173982844" duration="152000" />
-      <workItem from="1540174156783" duration="10201000" />
+      <workItem from="1540174156783" duration="11784000" />
+      <workItem from="1540188770051" duration="451000" />
+      <workItem from="1540189278345" duration="560000" />
+      <workItem from="1540189870273" duration="720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50872000" />
+    <option name="totallyTimeSpent" value="54186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15814444" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11808118" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -342,7 +384,6 @@
       <window_info id="JSON Viewer" order="11" weight="0.32841328" />
       <window_info id="Ant Build" order="12" weight="0.25" />
       <window_info id="Maven Projects" order="13" weight="0.32889584" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893504" weight="0.32862905" />
@@ -351,13 +392,14 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" weight="0.3296371" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50106496" side_tool="true" weight="0.32944345" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50106496" side_tool="true" weight="0.32862905" />
       <window_info anchor="bottom" id="SQL" order="9" weight="0.3296371" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32997987" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.3296371" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49946752" weight="0.32862905" />
       <window_info anchor="bottom" id="REST Client" order="14" weight="0.3296371" />
+      <window_info anchor="bottom" id="Messages" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Palette" order="2" />
@@ -459,8 +501,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="927">
-          <caret line="496" column="20" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
+        <state relative-caret-position="87">
+          <caret line="4" column="73" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.module" />
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/Handler.php5">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/custom/Logs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/custom/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1266">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="e#127#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/pgsql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -468,7 +552,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor>
-            <caret column="2" selection-start-column="2" selection-end-column="30" />
+            <caret selection-end-column="30" />
           </first_editor>
           <second_editor />
         </state>
@@ -477,8 +561,18 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="132">
-            <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <first_editor relative-caret-position="110">
+            <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4&amp;exception/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="34" selection-start-column="34" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>

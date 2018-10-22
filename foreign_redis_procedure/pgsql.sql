@@ -1,3 +1,9 @@
+create extension if not exists "uuid-ossp";
+create extension if not exists redis_fdw;
+create extension if not exists pgcrypto ;
+CREATE SERVER redis_server FOREIGN DATA WRAPPER redis_fdw OPTIONS (address '127.0.0.1', port '6379');
+CREATE USER MAPPING FOR PUBLIC SERVER redis_server OPTIONS (password '');
+
 DROP FUNCTION IF EXISTS base_structure_redis(JSON);
 DROP TABLE IF EXISTS "public"."base_redis_foreigns";
 DROP TYPE IF EXISTS methods;
