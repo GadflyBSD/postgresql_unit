@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foreign_redis_procedure/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,10 +76,10 @@
           <entry key="domicile_view" value="5" />
           <entry key="gray_personnel" value="2" />
           <entry key="json" value="2" />
-          <entry key="md" value="2" />
+          <entry key="md" value="6" />
           <entry key="splitaa" value="1" />
           <entry key="splitab" value="1" />
-          <entry key="sql" value="14" />
+          <entry key="sql" value="15" />
           <entry key="villages-aa" value="4" />
           <entry key="villages-ab" value="1" />
           <entry key="villages-ac" value="1" />
@@ -87,15 +89,15 @@
         <counts>
           <entry key="Database Element" value="43" />
           <entry key="JSON" value="2" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="SQL" value="5" />
+          <entry key="SQL" value="6" />
           <entry key="Scratch" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="750" />
+          <entry key="md" value="764" />
           <entry key="sql" value="5666" />
           <entry key="txt" value="8" />
           <entry key="villages-ab" value="1" />
@@ -104,7 +106,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="738" />
+          <entry key="Markdown" value="752" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="3677" />
           <entry key="Scratch" value="2001" />
@@ -118,11 +120,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor>
+                <caret column="2" selection-start-column="2" selection-end-column="30" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="235" column="23" selection-start-line="235" selection-start-column="23" selection-end-line="235" selection-end-column="23" />
+            <state relative-caret-position="927">
+              <caret line="496" column="20" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="132">
+                <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -150,8 +176,10 @@
         <option value="$PROJECT_DIR$/Administrative-divisions-of-China/data/split/villages-ac" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
         <option value="$PROJECT_DIR$/Administrative-divisions-of-China/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql" />
+        <option value="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" />
+        <option value="$PROJECT_DIR$/foreign_redis_procedure/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -210,7 +238,7 @@
             <path>
               <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
               <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
-              <item name="Administrative-divisions-of-China" type="462c0819:PsiDirectoryNode" />
+              <item name="foreign_redis_procedure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,12 +317,12 @@
       <workItem from="1539915476609" duration="4045000" />
       <workItem from="1539959135965" duration="2079000" />
       <workItem from="1540173982844" duration="152000" />
-      <workItem from="1540174156783" duration="9535000" />
+      <workItem from="1540174156783" duration="10201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50206000" />
+    <option name="totallyTimeSpent" value="50872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -397,26 +425,6 @@
     <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_area" />
     <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_street" />
     <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/domicile_view" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="132">
-            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="426">
-            <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="52" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -428,6 +436,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
           <caret line="235" column="23" selection-start-line="235" selection-start-column="23" selection-end-line="235" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="449">
+            <caret line="78" column="3" lean-forward="true" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="496" column="20" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor>
+            <caret column="2" selection-start-column="2" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="132">
+            <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
