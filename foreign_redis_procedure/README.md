@@ -1,6 +1,13 @@
 # PostgreSQL 通过外部表操作redis的存储过程
 
 ## 1. 依耐关系(首先需要安装`Redis_fdw`)
+```shell
+git clone -b REL_10_STABLE https://github.com/pg-redis-fdw/redis_fdw.git
+cd redis_fdw
+export PATH=/usr/pgsql-10//bin:$PATH
+make USE_PGXS=1
+make USE_PGXS=1 install
+```
 > 关于Redis_fdw 详见：https://pgxn.org/dist/redis_fdw/
 ```sql
 CREATE EXTENSION IF NOT EXISTS redis_fdw;
