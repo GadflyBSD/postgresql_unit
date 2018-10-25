@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ailiyun_Smscode/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Ailiyun_Smscode/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foreign_redis_procedure/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/foreign_redis_procedure/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +167,7 @@
         <counts>
           <entry key="cell" value="33" />
           <entry key="inc" value="1" />
-          <entry key="md" value="2134" />
+          <entry key="md" value="2153" />
           <entry key="php" value="11" />
           <entry key="sql" value="10843" />
           <entry key="txt" value="8" />
@@ -184,10 +177,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="2092" />
+          <entry key="Markdown" value="2103" />
           <entry key="PHP" value="12" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="SQL" value="7373" />
+          <entry key="SQL" value="7381" />
           <entry key="Scratch" value="3545" />
         </counts>
       </usages-collector>
@@ -270,8 +263,8 @@
         <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="1991">
-                <caret line="165" column="43" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
+              <first_editor relative-caret-position="410">
+                <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
               </first_editor>
               <second_editor />
             </state>
@@ -432,9 +425,9 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540452190666" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540452717778" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="PostgreSQL" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -506,12 +499,12 @@
       <workItem from="1540208697382" duration="25078000" />
       <workItem from="1540344359075" duration="677000" />
       <workItem from="1540356113572" duration="11578000" />
-      <workItem from="1540430104193" duration="19448000" />
+      <workItem from="1540430104193" duration="19921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112465000" />
+    <option name="totallyTimeSpent" value="112938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -544,7 +537,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32997987" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.3296371" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="13" sideWeight="0.49946752" visible="true" weight="0.32862905" />
+      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49946752" weight="0.32862905" />
       <window_info anchor="bottom" id="REST Client" order="14" weight="0.3296371" />
       <window_info anchor="bottom" id="Messages" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -869,8 +862,8 @@
     <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1991">
-            <caret line="165" column="43" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
+          <first_editor relative-caret-position="410">
+            <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
           </first_editor>
           <second_editor />
         </state>

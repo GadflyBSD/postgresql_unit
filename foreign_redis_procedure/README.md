@@ -36,14 +36,14 @@ SELECT structure_redis(json_build_object('action', 'rebuild'));
 ```sql
 SELECT structure_redis(
 	json_build_object(
-		'pk', 3,                                    -- 数据主键值
+		'pk', 3,									-- 数据主键值
 		'type', 'info',								-- 数据类型, 必须指定为`info`
 		'dbindex', 1,								-- 指定Redis的databases，范围：0~15， 默认：0
-		'schemas', 'ionic',                         -- 前端模式名称
-		'storage', 'sessionStorage',                -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
-		'store', 'userInfo',                        -- 前端存储store, 用于构造Redis的Key
-		'table', 'police_view_user',                -- 数据查询表名
-		'where', 'uid=4',                           -- 数据查询条件
+		'schemas', 'ionic',							-- 前端模式名称
+		'storage', 'sessionStorage',				-- 前端存储位置, 用于构造Redis的Key，默认indexedDB
+		'store', 'userInfo',						-- 前端存储store, 用于构造Redis的Key
+		'table', 'police_view_user',				-- 数据查询表名
+		'where', 'uid=4',							-- 数据查询条件
 		'restful', 'api/base/getUser'
 	)
 );
@@ -52,10 +52,10 @@ SELECT structure_redis(
 ```sql
 SELECT structure_redis(
            json_build_object(
-               'key', 'ionic_indexedDB_lottery:4',          -- 数据主键值
+               'key', 'ionic_indexedDB_lottery:4',			-- 缓存数据KEY
                'type', 'info',								-- 数据类型, 必须指定为`info`
-               'table', 'base_lottery',                     -- 数据查询表名
-               'where', 'uid=4',                            -- 数据查询条件
+               'table', 'base_lottery',						-- 数据查询表名
+               'where', 'uid=4',							-- 数据查询条件
                'restful', 'api/base/getLottery'
            )
        );
@@ -65,14 +65,14 @@ SELECT structure_redis(
 ```sql
 SELECT structure_redis(
 	json_build_object(
-		'pk', 4,                                    -- 数据主键值
+		'pk', 4,									-- 数据主键值
 		'type', 'info',								-- 数据类型, 必须指定为`info`
 		'dbindex', 1,								-- 指定Redis的databases，范围：0~15， 默认：0
-		'schemas', 'ionic',                         -- 前端模式名称
-		'storage', 'sessionStorage',                -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
-		'store', 'userInfo',                        -- 前端存储store, 用于构造Redis的Key
-		'table', 'police_view_user',                -- 数据查询表名
-		'primary', 'uid',                           -- 查询主键列名
+		'schemas', 'ionic',							-- 前端模式名称
+		'storage', 'sessionStorage',				-- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
+		'store', 'userInfo',						-- 前端存储store, 用于构造Redis的Key
+		'table', 'police_view_user',				-- 数据查询表名
+		'primary', 'uid',							-- 查询主键列名
 		'restful', 'api/base/getUser'
 	)
 );
@@ -81,10 +81,10 @@ SELECT structure_redis(
 ```sql
 SELECT structure_redis(
            json_build_object(
-               'key', 'ionic_indexedDB_lottery:4',          -- 数据主键值
+               'key', 'ionic_indexedDB_lottery:4',			-- 缓存数据KEY
                'type', 'info',								-- 数据类型, 必须指定为`info`
-               'table', 'base_lottery',                     -- 数据查询表名
-               'primary', 'id',                             -- 查询主键列名
+               'table', 'base_lottery',						-- 数据查询表名
+               'primary', 'id',								-- 查询主键列名
                'restful', 'api/base/getLottery'
            )
        );
@@ -94,12 +94,12 @@ SELECT structure_redis(
 ```sql
 SELECT structure_redis(
 	json_build_object(
-		'pk', 'policerList',                            -- 数据PK值(此处并非主键值，用以标注唯一性)
-		'dbindex', 1,																	-- 指定Redis的databases，范围：0~15， 默认：0
-		'storage', 'indexedDB',                  -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
-		'store', 'userList',                            -- 前端存储store, 用于构造Redis的Key
-		'table', 'police_view_user_list',               -- 数据查询表名
-		'where', 'user_group::JSONB @> json_build_array(''police'')::JSONB',    -- 数据查询条件
+		'pk', 'policerList',													-- 数据PK值(此处并非主键值，用以标注唯一性)
+		'dbindex', 1,															-- 指定Redis的databases，范围：0~15， 默认：0
+		'storage', 'indexedDB',													-- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
+		'store', 'userList',													-- 前端存储store, 用于构造Redis的Key
+		'table', 'police_view_user_list',										-- 数据查询表名
+		'where', 'user_group::JSONB @> json_build_array(''police'')::JSONB',	-- 数据查询条件
 		'restful', 'api/base/getUserList'
 	)
 );
@@ -108,9 +108,9 @@ SELECT structure_redis(
 ```sql
 SELECT structure_redis(
            json_build_object(
-               'key', 'ionic_indexedDB_lottery:list',       -- 数据主键值
-               'table', 'base_lottery',                     -- 数据查询表名
-               'where', 'id <> 0',                          -- 数据查询条件
+               'key', 'ionic_indexedDB_lottery:list',		-- 缓存数据KEY
+               'table', 'base_lottery',						-- 数据查询表名
+               'where', 'id <> 0',							-- 数据查询条件
                'restful', 'api/base/getLotteryList'
            )
        );
@@ -121,12 +121,12 @@ SELECT structure_redis(
 SELECT structure_redis(
          json_build_object(
              'schemas', 'ionic',
-             'pk', 'policer',						-- 数据PK值(此处并非主键值，用以标注唯一性)
-             'type', 'list',						-- 数据类型，可以不必指定，如果指定必须指定为`list`
-             'dbindex', 1,							-- 指定Redis的databases，范围：0~15， 默认：0
-             'storage', 'indexedDB',				-- 前端存储位置, 用于构造Redis的Key，默认indexedDB
-             'store', 'test',						-- 前端存储store, 用于构造Redis的Key
-             'data', '需要缓存的数据',					-- 数据查询表名
+             'pk', 'policer',							-- 数据PK值(此处并非主键值，用以标注唯一性)
+             'type', 'list',							-- 数据类型，可以不必指定，如果指定必须指定为`list`
+             'dbindex', 1,								-- 指定Redis的databases，范围：0~15， 默认：0
+             'storage', 'indexedDB',					-- 前端存储位置, 用于构造Redis的Key，默认indexedDB
+             'store', 'test',							-- 前端存储store, 用于构造Redis的Key
+             'data', json_build_array('需要缓存的数据'),	-- 需要缓存的自定义数据
              'restful', 'api/base/getTestList'
          )
      );
@@ -135,9 +135,9 @@ SELECT structure_redis(
 ```sql
 SELECT structure_redis(
            json_build_object(
-               'key', 'ionic_indexedDB_test:test2',
-               'dbindex', 1,									-- 指定Redis的databases，范围：0~15， 默认：0
-               'data', json_build_array('需要缓存的数据2'),		-- 数据查询表名
+               'key', 'ionic_indexedDB_test:test2',			-- 缓存数据KEY
+               'dbindex', 1,								-- 指定Redis的databases，范围：0~15， 默认：0
+               'data', json_build_array('需要缓存的数据'),		-- 需要缓存的自定义数据
                'restful', 'api/base/getTest2List'
            )
        );
