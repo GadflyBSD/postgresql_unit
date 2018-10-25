@@ -4,3 +4,5 @@
 * [通过外部表操作`redis`的存储过程](./foreign_redis_procedure)
 * [`ThinkPHP 5.1`下`log4php`和异常数据库存储](./log4&exception)
 * [抽奖实现，带奖项总数、奖项概率和出奖时间分布控制](./lottery_draw)
+* [阿里云短信验证码](./Ailiyun_Smscode)
+* [基于角色的权限访问控制RBAC](./Role_Based_Access_Control)

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery_draw/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery_draw/pgsql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ailiyun_Smscode/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Role_Based_Access_Control/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -99,17 +98,17 @@
     <session id="-2011404867">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -134,13 +133,13 @@
           <entry key="gray_personnel" value="2" />
           <entry key="inc" value="1" />
           <entry key="json" value="2" />
-          <entry key="md" value="15" />
+          <entry key="md" value="21" />
           <entry key="module" value="1" />
           <entry key="php" value="6" />
           <entry key="php5" value="2" />
           <entry key="splitaa" value="1" />
           <entry key="splitab" value="1" />
-          <entry key="sql" value="27" />
+          <entry key="sql" value="33" />
           <entry key="villages-aa" value="4" />
           <entry key="villages-ab" value="1" />
           <entry key="villages-ac" value="1" />
@@ -150,20 +149,20 @@
         <counts>
           <entry key="Database Element" value="50" />
           <entry key="JSON" value="2" />
-          <entry key="Markdown" value="15" />
+          <entry key="Markdown" value="21" />
           <entry key="PHP" value="10" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="SQL" value="17" />
-          <entry key="Scratch" value="10" />
+          <entry key="SQL" value="22" />
+          <entry key="Scratch" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="33" />
           <entry key="inc" value="1" />
-          <entry key="md" value="1639" />
+          <entry key="md" value="1968" />
           <entry key="php" value="11" />
-          <entry key="sql" value="8812" />
+          <entry key="sql" value="9738" />
           <entry key="txt" value="8" />
           <entry key="villages-ab" value="1" />
           <entry key="villages-ac" value="1" />
@@ -171,10 +170,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1626" />
+          <entry key="Markdown" value="1954" />
           <entry key="PHP" value="12" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="SQL" value="6028" />
+          <entry key="SQL" value="6955" />
           <entry key="Scratch" value="2830" />
         </counts>
       </usages-collector>
@@ -195,21 +194,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lottery_draw/pgsql.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="178" column="68" selection-start-line="178" selection-start-column="68" selection-end-line="178" selection-end-column="68" />
+            <state relative-caret-position="563">
+              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lottery_draw/README.md">
+        <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5346">
+              <caret line="243" column="56" selection-start-line="243" selection-start-column="56" selection-end-line="243" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/logic.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="1497" column="38" selection-start-line="1497" selection-start-column="18" selection-end-line="1497" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="535">
-                <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+              <first_editor relative-caret-position="132">
+                <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -223,11 +261,30 @@
       <find>base_</find>
       <find>、</find>
       <find>&quot;public&quot;.&quot;base_</find>
+      <find>user&quot;</find>
+      <find>&quot;</find>
+      <find>public.base_user.&quot;</find>
+      <find>&quot;public&quot;.&quot;police_picture&quot;</find>
+      <find>public.police_picture.&quot;</find>
+      <find>public.</find>
+      <find>&quot;public&quot;.&quot;police_config_category&quot;</find>
+      <find>&quot;public&quot;.&quot;police_</find>
+      <find>base_ailiyun_smscode.&quot;</find>
+      <find>config_type</find>
+      <find>logic_verify_smscode</find>
+      <find>smscode_status</find>
     </findStrings>
     <replaceStrings>
       <replace>dividion_</replace>
       <replace>', '</replace>
       <replace>public.base_</replace>
+      <replace>user</replace>
+      <replace>public.base_user.</replace>
+      <replace>public.police_picture</replace>
+      <replace>public.police_picture.</replace>
+      <replace>base_user_group</replace>
+      <replace>base_</replace>
+      <replace>base_ailiyun_smscode.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -250,10 +307,15 @@
         <option value="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/app.php" />
         <option value="$PROJECT_DIR$/log4&amp;exception/README.md" />
         <option value="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lottery_draw/README.md" />
         <option value="$PROJECT_DIR$/lottery_draw/pgsql.sql" />
+        <option value="$PROJECT_DIR$/Role_Based_Access_Control/README.md" />
+        <option value="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" />
+        <option value="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
+        <option value="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" />
+        <option value="$PROJECT_DIR$/Ailiyun_Smscode/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -282,7 +344,7 @@
     <option name="NEW_PHP_CLASS_LAST_EXTENSION" value="php5" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP latest" />
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="1440" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -309,7 +371,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="NBKnowledgePane" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -322,17 +383,13 @@
             <path>
               <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
               <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
-              <item name="Administrative-divisions-of-China" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
-              <item name="lottery_draw" type="462c0819:PsiDirectoryNode" />
+              <item name="Ailiyun_Smscode" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +401,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540205701176" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540437179288" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="PostgreSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
@@ -417,18 +474,19 @@
       <workItem from="1540205351377" duration="369000" />
       <workItem from="1540208697382" duration="25078000" />
       <workItem from="1540344359075" duration="677000" />
-      <workItem from="1540356113572" duration="4159000" />
+      <workItem from="1540356113572" duration="11578000" />
+      <workItem from="1540430104193" duration="5300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85598000" />
+    <option name="totallyTimeSpent" value="98317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.065366365" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -611,18 +669,21 @@
     <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_distribute" />
     <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_log" />
     <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3212">
-          <caret line="146" selection-start-line="146" selection-end-line="147" selection-end-column="48" />
+    <entry file="file://$PROJECT_DIR$/lottery_draw/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1352">
+            <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="110">
-            <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <first_editor relative-caret-position="24">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           </first_editor>
           <second_editor />
         </state>
@@ -630,25 +691,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2464">
+        <state relative-caret-position="4256">
           <caret line="373" column="47" selection-start-line="373" selection-start-column="15" selection-end-line="373" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lottery_draw/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="535">
-            <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lottery_draw/pgsql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="178" column="68" selection-start-line="178" selection-start-column="68" selection-end-line="178" selection-end-column="68" />
+        <state relative-caret-position="563">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5346">
+          <caret line="243" column="56" selection-start-line="243" selection-start-column="56" selection-end-line="243" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/logic.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="1497" column="38" selection-start-line="1497" selection-start-column="18" selection-end-line="1497" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="38" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="132">
+            <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
