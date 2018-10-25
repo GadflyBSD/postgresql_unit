@@ -17,11 +17,18 @@ CREATE USER MAPPING FOR PUBLIC SERVER redis_server OPTIONS (password '');
 > * `Redis`的`KEY`值生成规则：`storage:pk`
 ### 2.1 清空`Redis`缓存
 ```sql
-SELECT structure_redis(json_build_object(
-	'type', 'empty',
-	'foreign', '外部表名称(不指定则清空所有)',
-	'redis', 'base_redis(默认)'
+SELECT structure_redis(
+	json_build_object(
+		'action', 'empty',
+		'foreign', '外部表名称(不指定则清空所有)',
+		'redis', 'base_redis(默认)'
+	)
 );
+```
+
+### 2.2 重构`Redis`缓存
+```sql
+SELECT structure_redis(json_build_object('action', 'rebuild'));
 ```
 
 ### 2.2. 创建或刷新一条`JSON`对象形式的`Redis`缓存记录，用于单一数据的缓存
@@ -29,83 +36,135 @@ SELECT structure_redis(json_build_object(
 ```sql
 SELECT structure_redis(
 	json_build_object(
-		'pk', 4,                                    -- 数据主键值
-		'type', 'info',															-- 数据类型, 必须指定为`info`
-		'databases', 1,															-- 指定Redis的databases，范围：0~15， 默认：0
+		'pk', 3,                                    -- 数据主键值
+		'type', 'info',								-- 数据类型, 必须指定为`info`
+		'dbindex', 1,								-- 指定Redis的databases，范围：0~15， 默认：0
+		'schemas', 'ionic',                         -- 前端模式名称
 		'storage', 'sessionStorage',                -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
 		'store', 'userInfo',                        -- 前端存储store, 用于构造Redis的Key
 		'table', 'police_view_user',                -- 数据查询表名
-		'where', 'uid=4'                            -- 数据查询条件
-	)
-);
-```
-* #### 2.2.2 将指定表`table`的主键`primary`等于`pk`的查询结果的第一行记录以JSON对象形式进行Redis数据缓存
-```sql
-SELECT structure_redis(
-	json_build_object(
-		'pk', 4,                                    -- 数据主键值
-		'type', 'info',															-- 数据类型, 必须指定为`info`
-		'databases', 1,															-- 指定Redis的databases，范围：0~15， 默认：0
-		'storage', 'sessionStorage',                -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
-		'store', 'userInfo',                        -- 前端存储store, 用于构造Redis的Key
-		'table', 'police_view_user',                -- 数据查询表名
-		'primary', 'uid'                            -- 查询主键列名
-	)
-);
-```
-### 2.3 将指定表`table`的`where`查询结果以JSON数组对象形式创建或刷新一条Redis缓存记录，用于数据列表的缓存
-```sql
-SELECT structure_redis(
-	json_build_object(
-		'pk', 'policerList',                            -- 数据PK值(此处并非主键值，用以标注唯一性)
-		'type', 'list',																	-- 数据类型，可以不必指定，如果指定必须指定为`list`
-		'databases', 1,																	-- 指定Redis的databases，范围：0~15， 默认：0
-		'storage', 'indexedDB',                  -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
-		'store', 'userList',                            -- 前端存储store, 用于构造Redis的Key
-		'table', 'police_view_user_list',               -- 数据查询表名
-		'where', 'user_group::JSONB @> json_build_array(''police'')::JSONB'    -- 数据查询条件
-	)
-);
-```
-
-### 2.4 将指定数据`data`进行Redis数据缓存
-```sql
-SELECT base_structure_redis(
-				 json_build_object(
-					 'schemas', 'ionic',
-					 'pk', 'policerList',															-- 数据PK值(此处并非主键值，用以标注唯一性)
-					 'type', 'list',																	-- 数据类型，可以不必指定，如果指定必须指定为`list`
-					 'dbindex', 1,																		-- 指定Redis的databases，范围：0~15， 默认：0
-					 'storage', 'indexedDB',													-- 前端存储位置, 用于构造Redis的Key，默认indexedDB
-					 'store', 'user',																	-- 前端存储store, 用于构造Redis的Key
-					 'table', 'police_view_user_list',								-- 数据查询表名
-					 'where', 'user_group::JSONB @> json_build_array(''police'')::JSONB',		-- 数据查询条件
-					 'restful', 'api/base/getUserList'
-						 )
-					 );
-```
-
-### 2.5 删除一条指定`pk`的Redis缓存记录
-```sql
-SELECT structure_redis(
-	json_build_object(
-		'pk', 4,
-		'schemas', 'ionic',
-		'storage', 'indexedDB',
-		'store', 'user'
+		'where', 'uid=4',                           -- 数据查询条件
+		'restful', 'api/base/getUser'
 	)
 );
 ```
 或者
 ```sql
-SELECT base_structure_redis(json_build_object('action', 'remove', 'key', 'ionic.indexedDB_user:19'));
+SELECT structure_redis(
+           json_build_object(
+               'key', 'ionic_indexedDB_lottery:4',          -- 数据主键值
+               'type', 'info',								-- 数据类型, 必须指定为`info`
+               'table', 'base_lottery',                     -- 数据查询表名
+               'where', 'uid=4',                            -- 数据查询条件
+               'restful', 'api/base/getLottery'
+           )
+       );
+```
+
+* #### 2.2.2 将指定表`table`的主键`primary`等于`pk`的查询结果的第一行记录以JSON对象形式进行Redis数据缓存
+```sql
+SELECT structure_redis(
+	json_build_object(
+		'pk', 4,                                    -- 数据主键值
+		'type', 'info',								-- 数据类型, 必须指定为`info`
+		'dbindex', 1,								-- 指定Redis的databases，范围：0~15， 默认：0
+		'schemas', 'ionic',                         -- 前端模式名称
+		'storage', 'sessionStorage',                -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
+		'store', 'userInfo',                        -- 前端存储store, 用于构造Redis的Key
+		'table', 'police_view_user',                -- 数据查询表名
+		'primary', 'uid',                           -- 查询主键列名
+		'restful', 'api/base/getUser'
+	)
+);
+```
+或者
+```sql
+SELECT structure_redis(
+           json_build_object(
+               'key', 'ionic_indexedDB_lottery:4',          -- 数据主键值
+               'type', 'info',								-- 数据类型, 必须指定为`info`
+               'table', 'base_lottery',                     -- 数据查询表名
+               'primary', 'id',                             -- 查询主键列名
+               'restful', 'api/base/getLottery'
+           )
+       );
+```
+
+### 2.3 将指定表`table`的`where`查询结果以JSON数组对象形式创建或刷新一条Redis缓存记录，用于数据列表的缓存
+```sql
+SELECT structure_redis(
+	json_build_object(
+		'pk', 'policerList',                            -- 数据PK值(此处并非主键值，用以标注唯一性)
+		'dbindex', 1,																	-- 指定Redis的databases，范围：0~15， 默认：0
+		'storage', 'indexedDB',                  -- 前端存储位置, 用于构造Redis的Key，默认indexedDBStorage
+		'store', 'userList',                            -- 前端存储store, 用于构造Redis的Key
+		'table', 'police_view_user_list',               -- 数据查询表名
+		'where', 'user_group::JSONB @> json_build_array(''police'')::JSONB',    -- 数据查询条件
+		'restful', 'api/base/getUserList'
+	)
+);
+```
+或者
+```sql
+SELECT structure_redis(
+           json_build_object(
+               'key', 'ionic_indexedDB_lottery:list',       -- 数据主键值
+               'table', 'base_lottery',                     -- 数据查询表名
+               'where', 'id <> 0',                          -- 数据查询条件
+               'restful', 'api/base/getLotteryList'
+           )
+       );
+```
+
+### 2.4 将指定数据`data`进行Redis数据缓存
+```sql
+SELECT structure_redis(
+         json_build_object(
+             'schemas', 'ionic',
+             'pk', 'policer',						-- 数据PK值(此处并非主键值，用以标注唯一性)
+             'type', 'list',						-- 数据类型，可以不必指定，如果指定必须指定为`list`
+             'dbindex', 1,							-- 指定Redis的databases，范围：0~15， 默认：0
+             'storage', 'indexedDB',				-- 前端存储位置, 用于构造Redis的Key，默认indexedDB
+             'store', 'test',						-- 前端存储store, 用于构造Redis的Key
+             'data', '需要缓存的数据',					-- 数据查询表名
+             'restful', 'api/base/getTestList'
+         )
+     );
+```
+或者
+```sql
+SELECT structure_redis(
+           json_build_object(
+               'key', 'ionic_indexedDB_test:test2',
+               'dbindex', 1,									-- 指定Redis的databases，范围：0~15， 默认：0
+               'data', json_build_array('需要缓存的数据2'),		-- 数据查询表名
+               'restful', 'api/base/getTest2List'
+           )
+       );
+```
+
+### 2.5 删除一条指定`pk`的Redis缓存记录
+```sql
+SELECT structure_redis(
+	       json_build_object(
+		       'pk', 4,
+		       'schemas', 'ionic',
+		       'storage', 'indexedDB',
+		       'store', 'lottery'
+	       )
+       );
+```
+或者
+```sql
+SELECT structure_redis(json_build_object('key', 'ionic_indexedDB_lottery:3'));
 ```
 
 ## 3 参数说明
 
 参数|参数说明|可选值|类型|是否必填|默认值
 -|-|-|-|-|-
-type|数据或操作类型|list、info、remove、empty|ENUM|false|list
+action|数据或操作类型|upsert、remove、empty, rebuild|ENUM|false|upsert
+type|数据或操作类型|list、info、custom|ENUM|false|list
 schemas|缓存分区，可用于按用户组或项目功能进行数据可见性的分区|NULL|string|false|app
 storage|前端本地存储方式|NULL|string|除完全清空Redis外均必填|NULL
 store|前端本地存储store名|NULL|string|除完全清空Redis外均必填|NULL

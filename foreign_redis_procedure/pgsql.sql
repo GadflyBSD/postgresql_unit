@@ -4,48 +4,52 @@ create extension if not exists pgcrypto ;
 CREATE SERVER redis_server FOREIGN DATA WRAPPER redis_fdw OPTIONS (address '127.0.0.1', port '6379');
 CREATE USER MAPPING FOR PUBLIC SERVER redis_server OPTIONS (password '');
 
-DROP FUNCTION IF EXISTS base_structure_redis(JSON);
-DROP TABLE IF EXISTS "public"."base_redis_foreigns";
+DROP FUNCTION IF EXISTS structure_redis(JSON);
+DROP TABLE IF EXISTS base_redis_foreigns;
 DROP TYPE IF EXISTS methods;
-DROP TYPE IF EXISTS data_type;
-DROP TYPE IF EXISTS actions;
+DROP TYPE IF EXISTS redis_type;
+DROP TYPE IF EXISTS redis_actions;
 
-CREATE TYPE data_type AS ENUM('list', 'info');
+CREATE TYPE redis_type AS ENUM('list', 'info', 'custom');
 CREATE TYPE methods AS ENUM('get', 'post', 'put', 'delete', 'options');
-CREATE TYPE actions AS ENUM('empty', 'remove', 'upsert', 'rebuild');
+CREATE TYPE redis_actions AS ENUM('empty', 'remove', 'upsert', 'rebuild');
 
-CREATE TABLE "public"."base_redis_foreigns" (
-	"key" VARCHAR(200) NOT NULL,
-	"foreigns" VARCHAR(150) NOT NULL,
-	"schemas" VARCHAR(100) NOT NULL,
-	"storage" VARCHAR(100) NOT NULL,
-	"store" VARCHAR(100) NOT NULL,
-	"table" VARCHAR(150) NOT NULL,
+CREATE TABLE base_redis_foreigns (
+	key VARCHAR(200) NOT NULL,
+	foreigns VARCHAR(150) NOT NULL,
+	schemas VARCHAR(100) NOT NULL,
+	storage VARCHAR(100) NOT NULL,
+	store VARCHAR(100) NOT NULL,
+	"table" VARCHAR(150) DEFAULT NULL,
 	"primary" VARCHAR(150) DEFAULT NULL,
 	"where" VARCHAR(250) DEFAULT NULL,
-	"type" data_type DEFAULT 'list',
-	"dbindex" SMALLINT DEFAULT 0,
+	"data" JSON DEFAULT NULL,
+	"type" redis_type DEFAULT 'list',
+	dbindex SMALLINT DEFAULT 0,
 	"method" methods DEFAULT 'get',
 	"using" VARCHAR(100) DEFAULT NULL,
-	"restful" VARCHAR(200) DEFAULT NULL,
-	"route" JSON DEFAULT NULL,
-	"datetime" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-	PRIMARY KEY ("key")
+	restful VARCHAR(200) DEFAULT NULL,
+	route JSON DEFAULT NULL,
+	datetime TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL DEFAULT now(),
+	PRIMARY KEY (key)
 );
-COMMENT ON TABLE "public"."base_redis_foreigns" IS 'Redis外部表数据';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."key" IS 'Redis数据键名';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."foreigns" IS 'Redis外部表名';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."schemas" IS '前端模式名称';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."storage" IS '前端本地存储方式';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."store" IS '前端本地存储store名';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."table" IS '数据库查询表名';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."type" IS '数据缓存类型';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."dbindex" IS 'Redis数据库id';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."method" IS '数据请求方式';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."using" IS '数据用途';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."restful" IS '数据请求RestFul路径';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."route" IS '数据请求Route方式参数';
-COMMENT ON COLUMN "public"."base_redis_foreigns"."datetime" IS '最后更新时间';
+COMMENT ON TABLE base_redis_foreigns IS 'Redis外部表数据';
+COMMENT ON COLUMN base_redis_foreigns.key IS 'Redis数据键名';
+COMMENT ON COLUMN base_redis_foreigns.foreigns IS 'Redis外部表名';
+COMMENT ON COLUMN base_redis_foreigns.schemas IS '前端模式名称';
+COMMENT ON COLUMN base_redis_foreigns.storage IS '前端本地存储方式';
+COMMENT ON COLUMN base_redis_foreigns.store IS '前端本地存储store名';
+COMMENT ON COLUMN base_redis_foreigns.table IS '数据库查询表名';
+COMMENT ON COLUMN base_redis_foreigns.primary IS '数据库主键列名';
+COMMENT ON COLUMN base_redis_foreigns.where IS '数据库查询方法';
+COMMENT ON COLUMN base_redis_foreigns.data IS '自定义缓存数据';
+COMMENT ON COLUMN base_redis_foreigns.type IS '数据缓存类型';
+COMMENT ON COLUMN base_redis_foreigns.dbindex IS 'Redis数据库id';
+COMMENT ON COLUMN base_redis_foreigns.method IS '数据请求方式';
+COMMENT ON COLUMN base_redis_foreigns.using IS '数据用途';
+COMMENT ON COLUMN base_redis_foreigns.restful IS '数据请求RestFul路径';
+COMMENT ON COLUMN base_redis_foreigns.route IS '数据请求Route方式参数';
+COMMENT ON COLUMN base_redis_foreigns.datetime IS '最后更新时间';
 
 /**
  # PostgreSQL redis操作存储过程
@@ -169,7 +173,7 @@ restful|RestFul请求路径|NULL|string|新增缓存数据时必填|NULL
 route|数据Route请求方式所需的参数|NULL|JSON|false|NULL
 
  */
-CREATE OR REPLACE FUNCTION base_structure_redis(
+CREATE OR REPLACE FUNCTION structure_redis(
 	IN redis JSON
 )RETURNS JSON
 AS $$
@@ -185,7 +189,8 @@ DECLARE
 	table_val VARCHAR(100) DEFAULT NULL;
 	primary_val VARCHAR(150) DEFAULT NULL;
 	where_val	VARCHAR(250) DEFAULT NULL;
-	type_val data_type DEFAULT 'list';
+	custom_val JSON DEFAULT NULL;
+	type_val redis_type DEFAULT 'list';
 	method_val methods DEFAULT 'get';
 	restful_val VARCHAR(200);
 	route_val JSON DEFAULT NULL;
@@ -193,7 +198,7 @@ DECLARE
 	redis_key VARCHAR(100);
 	using_val VARCHAR(50) DEFAULT 'base';
 	cache_val JSON;
-	actions actions DEFAULT 'upsert';
+	actions redis_actions DEFAULT 'upsert';
 	foreign_table VARCHAR(100) DEFAULT NULL;
 	foreign_table_array VARCHAR(100)[];
 	foreign_table_num INTEGER;
@@ -205,9 +210,9 @@ DECLARE
 	executesql TEXT;
 BEGIN
 	IF(json_extract_path_text(redis, 'table') IS NULL AND
-		 json_extract_path_text(redis, 'data') IS NULL AND
-		 json_extract_path_text(redis, 'action') IS NULL AND
-		 json_extract_path_text(redis, 'pk') IS NOT NULL
+	   json_extract_path_text(redis, 'data') IS NULL AND
+	   json_extract_path_text(redis, 'action') IS NULL AND
+	   json_extract_path_text(redis, 'key') IS NOT NULL
 	) THEN
 		actions := 'remove';
 	ELSE
@@ -218,13 +223,17 @@ BEGIN
 	IF (json_extract_path_text(redis, 'key') IS NOT NULL) THEN
 		key_val := json_extract_path_text(redis, 'key');
 		SELECT rec[1], rec[2],
-					 (SELECT recd[1] FROM string_to_array(rec[3], ':') AS recd),
-					 (SELECT recd[2] FROM string_to_array(rec[3], ':') AS recd)
+		       (SELECT recd[1] FROM string_to_array(rec[3], ':') AS recd),
+		       (SELECT recd[2] FROM string_to_array(rec[3], ':') AS recd)
 				INTO schemas_val, storage_val, store_val, pk_val
 		FROM string_to_array(key_val, '_') AS rec;
 	ELSE
 		IF (json_extract_path_text(redis, 'schemas') IS NOT NULL) THEN
 			schemas_val := json_extract_path_text(redis, 'schemas');
+		ELSE
+			IF (actions = 'empty') THEN
+				schemas_val := 'all';
+			END IF;
 		END IF;
 		IF (json_extract_path_text(redis, 'storage') IS NOT NULL) THEN
 			storage_val := json_extract_path_text(redis, 'storage');
@@ -276,38 +285,59 @@ BEGIN
 	END IF;
 	CASE actions
 		WHEN 'rebuild' THEN
-		PERFORM base_structure_redis(json_build_object('action', 'empty', 'schemas', 'all'));
+		PERFORM structure_redis(json_build_object('action', 'empty', 'schemas', 'all'));
+		DELETE FROM base_redis_foreigns WHERE "table" IS NULL;
 		FOR redisRecord IN SELECT * FROM base_redis_foreigns LOOP
-			IF(redisRecord.type = 'info') THEN
+			CASE redisRecord.type
+				WHEN 'info' THEN
 				executesql := 'SELECT array_agg('||redisRecord."primary"||'::VARCHAR) FROM ' || redisRecord."table" || ';';
 				EXECUTE executesql INTO foreign_table_array;
 				FOREACH pk IN ARRAY foreign_table_array LOOP
-					PERFORM base_structure_redis(json_build_object(
-																				 'pk', pk,
-																				 'schemas', redisRecord.schemas,
-																				 'storage', redisRecord.storage,
-																				 'store', redisRecord.store,
-																				 'type', redisRecord.type,
-																				 'dbindex', redisRecord.dbindex,
-																				 'method', redisRecord.method,
-																				 'using', redisRecord."using",
-																				 'restful', redisRecord.restful,
-																				 'route', redisRecord.route,
-																				 'table', redisRecord."table",
-																				 'primary', redisRecord."primary"));
+					PERFORM structure_redis(
+						        json_build_object(
+							        'pk', pk,
+							        'schemas', redisRecord.schemas,
+							        'storage', redisRecord.storage,
+							        'store', redisRecord.store,
+							        'type', redisRecord.type,
+							        'dbindex', redisRecord.dbindex,
+							        'method', redisRecord.method,
+							        'using', redisRecord."using",
+							        'restful', redisRecord.restful,
+							        'route', redisRecord.route,
+							        'table', redisRecord."table",
+							        'primary', redisRecord."primary"
+								        )
+							        );
 				END LOOP;
+				WHEN 'list' THEN
+				PERFORM structure_redis(
+					        json_build_object(
+						        'key', redisRecord.key,
+						        'type', redisRecord.type,
+						        'dbindex', redisRecord.dbindex,
+						        'method', redisRecord.method,
+						        'using', redisRecord."using",
+						        'restful', redisRecord.restful,
+						        'route', redisRecord.route,
+						        'table', redisRecord."table",
+						        'where', redisRecord.where
+							        )
+						        );
 			ELSE
-				PERFORM base_structure_redis(json_build_object(
-																			 'key', redisRecord.key,
-																			 'type', redisRecord.type,
-																			 'dbindex', redisRecord.dbindex,
-																			 'method', redisRecord.method,
-																			 'using', redisRecord."using",
-																			 'restful', redisRecord.restful,
-																			 'route', redisRecord.route,
-																			 'table', redisRecord."table",
-																			 'where', redisRecord.where));
-			END IF;
+				PERFORM structure_redis(
+					        json_build_object(
+						        'key', redisRecord.key,
+						        'type', redisRecord.type,
+						        'dbindex', redisRecord.dbindex,
+						        'method', redisRecord.method,
+						        'using', redisRecord."using",
+						        'restful', redisRecord.restful,
+						        'route', redisRecord.route,
+						        'data', redisRecord."data"
+							        )
+						        );
+			END CASE;
 		END LOOP;
 		RETURN json_build_object('type', 'Success', 'message', '服务器中所有的Redis缓存已经被重新创建!', 'code', 200);
 		WHEN 'empty' THEN
@@ -317,30 +347,27 @@ BEGIN
 			SELECT array_agg(table_name::VARCHAR) INTO foreign_table_array FROM information_schema.tables
 			WHERE table_type = 'FOREIGN TABLE' AND table_name LIKE '%redis_%';
 			WHEN (storage_val IS NULL AND store_val IS NULL) THEN
-			executesql := 'SELECT array_agg(table_name::VARCHAR) FROM information_schema.tables' ||
-										'WHERE table_type = ''FOREIGN TABLE'' AND table_name LIKE $1';
+			executesql := 'SELECT array_agg(table_name::VARCHAR) FROM information_schema.tables ' ||
+			              'WHERE table_type = ''FOREIGN TABLE'' AND table_name LIKE $1';
 			EXECUTE executesql INTO foreign_table_array USING schemas_val || '_redis_%';
 			WHEN (storage_val IS NOT NULL AND store_val IS NULL) THEN
-			executesql := 'SELECT array_agg(table_name::VARCHAR) FROM information_schema.tables' ||
-										'WHERE table_type = ''FOREIGN TABLE'' AND table_name LIKE $1';
+			executesql := 'SELECT array_agg(table_name::VARCHAR) FROM information_schema.tables ' ||
+			              'WHERE table_type = ''FOREIGN TABLE'' AND table_name LIKE $1';
 			EXECUTE executesql INTO foreign_table_array USING schemas_val || '_redis_' || storage_val || '_%';
 		ELSE
-			executesql := 'SELECT array_agg(table_name::VARCHAR) FROM information_schema.tables' ||
-										'WHERE table_type = ''FOREIGN TABLE'' AND table_name LIKE $1';
+			executesql := 'SELECT array_agg(table_name::VARCHAR) FROM information_schema.tables ' ||
+			              'WHERE table_type = ''FOREIGN TABLE'' AND table_name LIKE $1';
 			EXECUTE executesql INTO foreign_table_array USING schemas_val || '_redis_' || storage_val || '_' || store_val;
 		END CASE;
 		IF(foreign_table_array IS NOT NULL) THEN
-			FOR item IN SELECT "key", "foreigns", "schemas" FROM base_redis_foreigns LOOP
-				FOREACH foreign_table IN ARRAY foreign_table_array LOOP
-					IF (item.foreigns = foreign_table) THEN
-						executesql := 'DELETE FROM ' || quote_ident(item.schemas || '_redis_indexedDB_foreigns') || ' WHERE key = $1;';
-						EXECUTE executesql USING item.key;
-						executesql := 'DELETE FROM ' || quote_ident(foreign_table) || ';';
-						EXECUTE executesql;
-						executesql := 'DROP FOREIGN TABLE IF EXISTS ' || quote_ident(foreign_table)|| ';';
-						EXECUTE executesql;
-					END IF;
-				END LOOP;
+			FOREACH foreign_table IN ARRAY foreign_table_array LOOP
+				SELECT "key", "foreigns", "schemas" INTO item FROM base_redis_foreigns WHERE "foreigns" = foreign_table;
+				executesql := 'DELETE FROM ' || quote_ident(item.schemas || '_redis_indexedDB_foreigns') || ' WHERE key = $1;';
+				EXECUTE executesql USING item.key;
+				executesql := 'DELETE FROM ' || quote_ident(foreign_table) || ';';
+				EXECUTE executesql;
+				executesql := 'DROP FOREIGN TABLE IF EXISTS ' || quote_ident(foreign_table)|| ';';
+				EXECUTE executesql;
 			END LOOP;
 			FOR item IN SELECT DISTINCT "schemas" FROM base_redis_foreigns LOOP
 				executesql := 'DROP FOREIGN TABLE IF EXISTS ' || quote_ident(item.schemas || ' _redis_indexedDB_foreigns') || ';';
@@ -372,7 +399,7 @@ BEGIN
 		ELSE
 			IF (json_extract_path_text(redis, 'where') IS NOT NULL) THEN
 				where_val := json_extract_path_text(redis, 'where');
-				IF(type_val = 'info') THEN
+				IF(type_val = 'info' AND primary_val IS NULL) THEN
 					SELECT rec[1] INTO primary_val FROM string_to_array(where_val, '=') AS rec;
 				END IF;
 			END IF;
@@ -436,29 +463,33 @@ BEGIN
 				END IF;
 			END IF;
 		END IF;
-		CASE
-			WHEN (table_val IS NULL AND data_val IS NULL) THEN
-			RETURN json_build_object('type', 'Error', 'message', '新增或更新Redis缓存时table参数和data参数不能同时为空!', 'code', 230);
-			WHEN (table_val IS NOT NULL AND where_val IS NULL) THEN
-			IF(type_val = 'info') THEN
-				executesql := 'SELECT json_agg(' || table_val || ')->0 FROM "' || table_val || '" LIMIT 1;';
+		IF (data_val IS NULL) THEN
+			CASE
+				WHEN (table_val IS NULL) THEN
+				RETURN json_build_object('type', 'Error', 'message', '新增或更新Redis缓存时table参数和data参数不能同时为空!', 'code', 230);
+				WHEN (table_val IS NOT NULL AND where_val IS NULL) THEN
+				IF(type_val = 'info') THEN
+					executesql := 'SELECT json_agg(' || table_val || ')->0 FROM "' || table_val || '" LIMIT 1;';
+				ELSE
+					executesql := 'SELECT json_agg(' || table_val || ') FROM "' || table_val || '";';
+				END IF;
+				EXECUTE executesql INTO data_val;
+				WHEN (table_val IS NOT NULL AND where_val IS NOT NULL) THEN
+				IF(type_val = 'info') THEN
+					executesql := 'SELECT json_agg(' || table_val || ')->0 FROM "' || table_val || '" WHERE ' || where_val || ' LIMIT 1;';
+				ELSE
+					executesql := 'SELECT json_agg(' || table_val || ') FROM "' || table_val || '" WHERE ' || where_val || ';';
+				END IF;
+				EXECUTE executesql INTO data_val;
 			ELSE
-				executesql := 'SELECT json_agg(' || table_val || ') FROM "' || table_val || '";';
-			END IF;
-			WHEN (table_val IS NOT NULL AND where_val IS NOT NULL) THEN
-			IF(type_val = 'info') THEN
-				executesql := 'SELECT json_agg(' || table_val || ')->0 FROM "' || table_val || '" WHERE ' || where_val || ' LIMIT 1;';
-			ELSE
-				executesql := 'SELECT json_agg(' || table_val || ') FROM "' || table_val || '" WHERE ' || where_val || ';';
-			END IF;
-		END CASE;
-		EXECUTE executesql INTO data_val;
-		IF(data_val IS NULL) THEN
-			IF(type_val = 'list') THEN
-				data_val := json_build_array();
-			ELSE
-				data_val := json_build_object();
-			END IF;
+				IF(type_val = 'list') THEN
+					data_val := json_build_array();
+				ELSE
+					data_val := json_build_object();
+				END IF;
+			END CASE;
+		ELSE
+			custom_val := data_val;
 		END IF;
 		cache_val := json_build_object(
 				'pk', pk_val,
@@ -473,16 +504,19 @@ BEGIN
 		ELSE
 			where_val := NULL;
 		end if;
-		executesql := 'INSERT INTO public.base_redis_foreigns ("key", "foreigns", "schemas", "storage", "store", "table", "where", "primary", "type", "dbindex", "method", "using", "restful", "route") VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) ON CONFLICT ("key") DO UPDATE SET "datetime"=now(), "foreigns"=$2, "schemas"=$3, "storage"=$4, "store"=$5, "table"=$6, "where"=$7, "primary"=$8, "type"=$9, "dbindex"=$10, "method"=$11, "using"=$12, "restful"=$13, "route"=$14';
-		EXECUTE executesql USING key_val, foreign_table, schemas_val, storage_val, store_val, table_val, where_val, primary_val, type_val, dbindex, method_val, using_val, restful_val, route_val;
+		executesql := 'INSERT INTO public.base_redis_foreigns ("key", "foreigns", "schemas", "storage", "store", "table", "where", "primary", "data", "type", "dbindex", "method", "using", "restful", "route") VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) ON CONFLICT ("key") DO UPDATE SET "datetime"=now(), "foreigns"=$2, "schemas"=$3, "storage"=$4, "store"=$5, "table"=$6, "where"=$7, "primary"=$8, "data"=$9, "type"=$10, "dbindex"=$11, "method"=$12, "using"=$13, "restful"=$14, "route"=$15';
+		EXECUTE executesql USING key_val, foreign_table, schemas_val, storage_val, store_val, table_val, where_val, primary_val, custom_val, type_val, dbindex, method_val, using_val, restful_val, route_val;
 	END CASE;
 	IF(key_val != schemas_val || '_indexedDB_foreigns:list') THEN
-		PERFORM base_structure_redis(json_build_object(
-																	 'key', schemas_val || '_indexedDB_foreigns:list',
-																	 'dbindex', 15,
-																	 'restful', 'api/base/getForeigns',
-																	 'table', 'base_redis_foreigns',
-																	 'where', 'schemas = ''' || schemas_val || ''''));
+		PERFORM structure_redis(
+			        json_build_object(
+				        'key', schemas_val || '_indexedDB_foreigns:list',
+				        'dbindex', 15,
+				        'restful', 'api/base/getForeigns',
+				        'table', 'base_redis_foreigns',
+				        'where', 'schemas = ''' || schemas_val || ''''
+					        )
+				        );
 	END IF;
 	IF(actions = 'remove') THEN
 		RETURN json_build_object('type', 'Success', 'message', '删除Redis缓存[' || redis_key || ']成功!', 'code', 200);
