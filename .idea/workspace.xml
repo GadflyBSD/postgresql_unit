@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ailiyun_Smscode/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Role_Based_Access_Control/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,7 +153,7 @@
         <counts>
           <entry key="cell" value="33" />
           <entry key="inc" value="1" />
-          <entry key="md" value="1968" />
+          <entry key="md" value="1973" />
           <entry key="php" value="11" />
           <entry key="sql" value="9738" />
           <entry key="txt" value="8" />
@@ -170,7 +163,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1954" />
+          <entry key="Markdown" value="1959" />
           <entry key="PHP" value="12" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="6955" />
@@ -234,20 +227,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="132">
-                <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
               <first_editor>
-                <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="10" />
+                <caret column="32" selection-start-column="32" selection-end-column="32" />
               </first_editor>
               <second_editor />
             </state>
@@ -401,7 +382,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540437179288" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540437209005" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="PostgreSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
@@ -475,12 +456,12 @@
       <workItem from="1540208697382" duration="25078000" />
       <workItem from="1540344359075" duration="677000" />
       <workItem from="1540356113572" duration="11578000" />
-      <workItem from="1540430104193" duration="5300000" />
+      <workItem from="1540430104193" duration="5622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98317000" />
+    <option name="totallyTimeSpent" value="98639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -744,8 +725,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="132">
-            <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <first_editor>
+            <caret column="32" selection-start-column="32" selection-end-column="32" />
           </first_editor>
           <second_editor />
         </state>
