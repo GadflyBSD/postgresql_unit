@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="730415b6-9ec7-4796-bd4f-b00cccc5964b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/foreign_redis_procedure/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/foreign_redis_procedure/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/887b9cd6-7fd8-4293-9465-31d781af6906/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Role_Based_Access_Control/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Role_Based_Access_Control/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,16 +74,8 @@
         <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="foreign tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="base_user: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -100,17 +98,17 @@
     <session id="-2011404867">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -118,6 +116,7 @@
           <entry key="base_city" value="3" />
           <entry key="base_config" value="2" />
           <entry key="base_dividion_view" value="2" />
+          <entry key="base_log_user" value="4" />
           <entry key="base_lottery" value="2" />
           <entry key="base_lottery_distribute" value="2" />
           <entry key="base_lottery_log" value="4" />
@@ -125,6 +124,10 @@
           <entry key="base_province" value="3" />
           <entry key="base_redis_foreigns" value="10" />
           <entry key="base_street" value="2" />
+          <entry key="base_user" value="1" />
+          <entry key="base_user_list_view" value="6" />
+          <entry key="base_user_realname" value="4" />
+          <entry key="base_user_view" value="8" />
           <entry key="base_village" value="7" />
           <entry key="csv" value="7" />
           <entry key="dividion_area" value="2" />
@@ -140,13 +143,14 @@
           <entry key="ionic_redis_indexedDB_lottery" value="7" />
           <entry key="ionic_redis_indexedDB_test" value="3" />
           <entry key="json" value="2" />
-          <entry key="md" value="24" />
+          <entry key="md" value="25" />
           <entry key="module" value="1" />
           <entry key="php" value="6" />
           <entry key="php5" value="2" />
           <entry key="splitaa" value="1" />
           <entry key="splitab" value="1" />
-          <entry key="sql" value="37" />
+          <entry key="sql" value="42" />
+          <entry key="user_changes" value="1" />
           <entry key="villages-aa" value="4" />
           <entry key="villages-ab" value="1" />
           <entry key="villages-ac" value="1" />
@@ -154,34 +158,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="82" />
+          <entry key="Database Element" value="105" />
           <entry key="JSON" value="2" />
-          <entry key="Markdown" value="24" />
+          <entry key="Markdown" value="25" />
           <entry key="PHP" value="10" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="SQL" value="24" />
-          <entry key="Scratch" value="13" />
+          <entry key="SQL" value="29" />
+          <entry key="Scratch" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="33" />
           <entry key="inc" value="1" />
-          <entry key="md" value="2167" />
+          <entry key="md" value="3554" />
           <entry key="php" value="11" />
-          <entry key="sql" value="11037" />
+          <entry key="sql" value="14659" />
           <entry key="txt" value="8" />
+          <entry key="user_changes" value="6" />
           <entry key="villages-ab" value="1" />
           <entry key="villages-ac" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="2117" />
+          <entry key="Markdown" value="3428" />
           <entry key="PHP" value="12" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="SQL" value="7412" />
-          <entry key="Scratch" value="3708" />
+          <entry key="SQL" value="10743" />
+          <entry key="Scratch" value="4081" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -202,37 +207,27 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lottery_draw/pgsql.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/logic.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4378">
-              <caret line="199" column="9" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
+            <state relative-caret-position="155">
+              <caret line="1159" column="50" selection-start-line="1159" selection-start-column="27" selection-end-line="1159" selection-end-column="50" />
+              <folding>
+                <element signature="e#6008#6908#0" />
+                <element signature="e#9434#12394#0" />
+                <element signature="e#12533#15389#0" />
+                <element signature="e#18971#21618#0" />
+                <element signature="e#21825#25703#0" />
+                <element signature="e#25908#28789#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql">
+        <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10416">
-              <caret line="429" column="20" lean-forward="true" selection-start-line="429" selection-start-column="20" selection-end-line="429" selection-end-column="20" />
+            <state relative-caret-position="280">
+              <caret line="246" column="49" selection-start-line="246" selection-start-column="42" selection-end-line="246" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -240,18 +235,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="63" />
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/README.md">
+        <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="205">
-                <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <first_editor relative-caret-position="408">
+                <caret line="227" column="24" lean-forward="true" selection-start-line="227" selection-start-column="24" selection-end-line="227" selection-end-column="24" />
               </first_editor>
               <second_editor />
             </state>
@@ -281,6 +276,8 @@
       <find>&quot;public&quot;.&quot;base_redis_foreigns&quot;</find>
       <find>base_redis_foreigns.&quot;</find>
       <find>)</find>
+      <find>base_socket.&quot;</find>
+      <find>socket</find>
     </findStrings>
     <replaceStrings>
       <replace>dividion_</replace>
@@ -296,6 +293,7 @@
       <replace>4,</replace>
       <replace>base_redis_foreigns</replace>
       <replace>base_redis_foreigns.</replace>
+      <replace>base_socket.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -318,15 +316,16 @@
         <option value="$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.php" />
         <option value="$PROJECT_DIR$/lottery_draw/README.md" />
         <option value="$PROJECT_DIR$/lottery_draw/pgsql.sql" />
-        <option value="$PROJECT_DIR$/Role_Based_Access_Control/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" />
-        <option value="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" />
-        <option value="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" />
         <option value="$PROJECT_DIR$/Ailiyun_Smscode/README.md" />
         <option value="$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
         <option value="$PROJECT_DIR$/foreign_redis_procedure/README.md" />
+        <option value="$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql" />
+        <option value="887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/object-type/user_changes" />
+        <option value="$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql" />
+        <option value="$PROJECT_DIR$/Role_Based_Access_Control/logic.sql" />
+        <option value="$PROJECT_DIR$/Role_Based_Access_Control/README.md" />
       </list>
     </option>
   </component>
@@ -355,7 +354,7 @@
     <option name="NEW_PHP_CLASS_LAST_EXTENSION" value="php5" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP latest" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="1440" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -382,8 +381,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="NBKnowledgePane" />
       <pane id="PackagesPane" />
+      <pane id="NBKnowledgePane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -394,13 +394,17 @@
             <path>
               <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
               <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
-              <item name="foreign_redis_procedure" type="462c0819:PsiDirectoryNode" />
+              <item name="Administrative-divisions-of-China" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="postgresql_unit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="postgresql_unit" type="462c0819:PsiDirectoryNode" />
+              <item name="Ailiyun_Smscode" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,7 +416,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540457224928" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540461189571" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="PostgreSQL" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
@@ -486,12 +490,13 @@
       <workItem from="1540208697382" duration="25078000" />
       <workItem from="1540344359075" duration="677000" />
       <workItem from="1540356113572" duration="11578000" />
-      <workItem from="1540430104193" duration="24142000" />
+      <workItem from="1540430104193" duration="27494000" />
+      <workItem from="1540516738993" duration="28993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117159000" />
+    <option name="totallyTimeSpent" value="149504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -504,7 +509,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Structure" order="6" weight="0.24934107" />
-      <window_info id="Database" order="7" visible="true" weight="0.14812863" />
+      <window_info id="Database" order="7" visible="true" weight="0.110173956" />
       <window_info id="Redis Servers" order="8" weight="0.32961783" />
       <window_info id="RestServices" order="9" weight="0.32889584" />
       <window_info id="Remote Host" order="10" weight="0.32889584" />
@@ -555,302 +560,369 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_village" />
-    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/areas.csv">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
-    <entry file="dbSrc:///40611657/887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/routine/logic_build_people@(json).sql">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/object-type/user_changes">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="49" column="10" lean-forward="true" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        <state relative-caret-position="22">
+          <caret line="1" column="101" selection-start-line="1" selection-start-column="101" selection-end-line="1" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/villages.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-198625">
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/data/split/villages-aa" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_village" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_province" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/dividion_view" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_city" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_area" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/dividion_street" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/domicile_view" />
-    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="449">
-            <caret line="78" column="3" lean-forward="true" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.module" />
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/Handler.php5" />
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/custom/Logs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/extend/custom/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1266">
-          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="34" selection-start-column="34" selection-end-column="34" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/log4php.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/thinkphp_5.1/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log4&amp;exception/pgsql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="68" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_lottery_log_view" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_distribute" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_log" />
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery" />
-    <entry file="file://$PROJECT_DIR$/lottery_draw/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1352">
-            <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="24">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4256">
-          <caret line="373" column="47" selection-start-line="373" selection-start-column="15" selection-end-line="373" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lottery_draw/pgsql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-2">
-            <caret column="32" selection-start-column="32" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1347">
-          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_config">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="c_json" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/logic.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4378">
-          <caret line="199" column="9" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="154">
-            <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_log">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_log">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_log">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_log_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery_log">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_lottery">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/foreign-table/ionic_redis_indexedDB_test">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-          <column-attributes>
-            <column name="val" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/foreign-table/ionic_redis_indexedDB_foreigns">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="val" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/foreign-table/ionic_redis_indexedDB_lottery">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="val" languageId="JSON" />
-          </column-attributes>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ailiyun_Smscode/pgsql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="397">
+          <caret line="65" column="117" selection-start-line="65" selection-start-column="117" selection-end-line="65" selection-end-column="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/pgsql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10416">
-          <caret line="429" column="20" lean-forward="true" selection-start-line="429" selection-start-column="20" selection-end-line="429" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_redis_foreigns">
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-          <column-attributes>
-            <column name="data" languageId="JSON" />
-            <column name="route" languageId="JSON" />
-          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_list_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_list_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_list_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_list_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative-divisions-of-China/pgsql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="489" column="119" selection-start-line="489" selection-start-column="89" selection-end-line="489" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/table/base_user_realname">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://887b9cd6-7fd8-4293-9465-31d781af6906/database/postgres/schema/public/view/base_user_list_view">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/pgsql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="246" column="49" selection-start-line="246" selection-start-column="42" selection-end-line="246" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887b9cd6-7fd8-4293-9465-31d781af6906/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="63" />
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/foreign_redis_procedure/README.md">
+    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/logic.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="1159" column="50" selection-start-line="1159" selection-start-column="27" selection-end-line="1159" selection-end-column="50" />
+          <folding>
+            <element signature="e#6008#6908#0" />
+            <element signature="e#9434#12394#0" />
+            <element signature="e#12533#15389#0" />
+            <element signature="e#18971#21618#0" />
+            <element signature="e#21825#25703#0" />
+            <element signature="e#25908#28789#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Role_Based_Access_Control/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="205">
-            <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <first_editor relative-caret-position="408">
+            <caret line="227" column="24" lean-forward="true" selection-start-line="227" selection-start-column="24" selection-end-line="227" selection-end-column="24" />
           </first_editor>
           <second_editor />
         </state>
