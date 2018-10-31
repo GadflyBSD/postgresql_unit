@@ -1,43 +1,46 @@
-DROP VIEW IF EXISTS dividion_view;
+DROP FUNCTION IF EXISTS func_verificate_card_number(VARCHAR);
+DROP FUNCTION IF EXISTS logic_build_people(JSON);
+DROP VIEW IF EXISTS base_dividion_view;
+DROP VIEW IF EXISTS base_domicile_view;
 
-DROP TABLE IF EXISTS dividion_province;
-CREATE TABLE dividion_province(
+DROP TABLE IF EXISTS base_dividion_province;
+CREATE TABLE base_dividion_province(
 	code INTEGER NOT NULL,
 	name VARCHAR(20) NOT NULL,
 	PRIMARY KEY (code)
 );
-COMMENT ON TABLE dividion_province IS '省级行政区划';
-COMMENT ON COLUMN dividion_province.code IS '代码';
-COMMENT ON COLUMN dividion_province.name IS '省级名称';
+COMMENT ON TABLE base_dividion_province IS '省级行政区划';
+COMMENT ON COLUMN base_dividion_province.code IS '代码';
+COMMENT ON COLUMN base_dividion_province.name IS '省级名称';
 
-DROP TABLE IF EXISTS dividion_city;
-CREATE TABLE dividion_city(
+DROP TABLE IF EXISTS base_dividion_city;
+CREATE TABLE base_dividion_city(
 	code INTEGER NOT NULL,
 	name VARCHAR(40) NOT NULL,
 	"provinceCode" INTEGER NOT NULL,
 	PRIMARY KEY (code)
 );
-COMMENT ON TABLE dividion_city IS '地市级行政区划';
-COMMENT ON COLUMN dividion_city.code IS '代码';
-COMMENT ON COLUMN dividion_city.name IS '地市级名称';
-COMMENT ON COLUMN dividion_city."provinceCode" IS '省级代码';
+COMMENT ON TABLE base_dividion_city IS '地市级行政区划';
+COMMENT ON COLUMN base_dividion_city.code IS '代码';
+COMMENT ON COLUMN base_dividion_city.name IS '地市级名称';
+COMMENT ON COLUMN base_dividion_city."provinceCode" IS '省级代码';
 
-DROP TABLE IF EXISTS dividion_area;
-CREATE TABLE dividion_area(
+DROP TABLE IF EXISTS base_dividion_area;
+CREATE TABLE base_dividion_area(
 	code INTEGER NOT NULL,
 	name VARCHAR(60) NOT NULL,
 	"cityCode" INTEGER NOT NULL,
 	"provinceCode" INTEGER NOT NULL,
 	PRIMARY KEY (code)
 );
-COMMENT ON TABLE dividion_area IS '区县级行政区划';
-COMMENT ON COLUMN dividion_area.code IS '代码';
-COMMENT ON COLUMN dividion_area.name IS '区县级名称';
-COMMENT ON COLUMN dividion_area."cityCode" IS '地市级代码';
-COMMENT ON COLUMN dividion_area."provinceCode" IS '省级代码';
+COMMENT ON TABLE base_dividion_area IS '区县级行政区划';
+COMMENT ON COLUMN base_dividion_area.code IS '代码';
+COMMENT ON COLUMN base_dividion_area.name IS '区县级名称';
+COMMENT ON COLUMN base_dividion_area."cityCode" IS '地市级代码';
+COMMENT ON COLUMN base_dividion_area."provinceCode" IS '省级代码';
 
-DROP TABLE IF EXISTS dividion_street;
-CREATE TABLE dividion_street(
+DROP TABLE IF EXISTS base_dividion_street;
+CREATE TABLE base_dividion_street(
 	code INTEGER NOT NULL,
 	name VARCHAR(100) NOT NULL,
 	"areaCode" INTEGER NOT NULL,
@@ -45,15 +48,15 @@ CREATE TABLE dividion_street(
 	"provinceCode" INTEGER NOT NULL,
 	PRIMARY KEY (code)
 );
-COMMENT ON TABLE dividion_street IS '乡镇、街道级行政区划';
-COMMENT ON COLUMN dividion_street.code IS '代码';
-COMMENT ON COLUMN dividion_street.name IS '乡镇、街道级名称';
-COMMENT ON COLUMN dividion_street."areaCode" IS '区县级代码';
-COMMENT ON COLUMN dividion_street."cityCode" IS '地市级代码';
-COMMENT ON COLUMN dividion_street."provinceCode" IS '省级代码';
+COMMENT ON TABLE base_dividion_street IS '乡镇、街道级行政区划';
+COMMENT ON COLUMN base_dividion_street.code IS '代码';
+COMMENT ON COLUMN base_dividion_street.name IS '乡镇、街道级名称';
+COMMENT ON COLUMN base_dividion_street."areaCode" IS '区县级代码';
+COMMENT ON COLUMN base_dividion_street."cityCode" IS '地市级代码';
+COMMENT ON COLUMN base_dividion_street."provinceCode" IS '省级代码';
 
-DROP TABLE IF EXISTS dividion_village;
-CREATE TABLE dividion_village(
+DROP TABLE IF EXISTS base_dividion_village;
+CREATE TABLE base_dividion_village(
 	code BIGINT NOT NULL,
 	name VARCHAR(250) NOT NULL,
 	"streetCode" INTEGER NOT NULL,
@@ -62,16 +65,16 @@ CREATE TABLE dividion_village(
 	"provinceCode" INTEGER NOT NULL,
 	PRIMARY KEY (code)
 );
-COMMENT ON TABLE dividion_village IS '村级行政区划';
-COMMENT ON COLUMN dividion_village.code IS '代码';
-COMMENT ON COLUMN dividion_village.name IS '村级名称';
-COMMENT ON COLUMN dividion_village."streetCode" IS '乡镇、街道级代码';
-COMMENT ON COLUMN dividion_village."areaCode" IS '区县级代码';
-COMMENT ON COLUMN dividion_village."cityCode" IS '地市级代码';
-COMMENT ON COLUMN dividion_village."provinceCode" IS '省级代码';
+COMMENT ON TABLE base_dividion_village IS '村级行政区划';
+COMMENT ON COLUMN base_dividion_village.code IS '代码';
+COMMENT ON COLUMN base_dividion_village.name IS '村级名称';
+COMMENT ON COLUMN base_dividion_village."streetCode" IS '乡镇、街道级代码';
+COMMENT ON COLUMN base_dividion_village."areaCode" IS '区县级代码';
+COMMENT ON COLUMN base_dividion_village."cityCode" IS '地市级代码';
+COMMENT ON COLUMN base_dividion_village."provinceCode" IS '省级代码';
 
-DROP VIEW IF EXISTS dividion_view;
-CREATE VIEW dividion_view AS
+DROP VIEW IF EXISTS base_dividion_view;
+CREATE VIEW base_dividion_view AS
 	SELECT
 				 v.code,
 				 v."provinceCode",
@@ -89,25 +92,25 @@ CREATE VIEW dividion_view AS
 						 (p.name || c.name || a.name || s.name || v.name)
 						 END)AS address
 	FROM
-			 ((((dividion_village v left join dividion_province p ON v."provinceCode" = p.code)
-					 LEFT JOIN dividion_city c ON v."cityCode" = c.code)
-					 LEFT JOIN dividion_area a ON v."areaCode" = a.code)
-					 LEFT JOIN dividion_street s ON v."streetCode" = s.code);
-COMMENT ON VIEW dividion_view IS '中华人民共和国五级行政区划视图';
-COMMENT ON COLUMN dividion_view.code IS '完整行政区划代码';
-COMMENT ON COLUMN dividion_view."provinceCode" IS '省级代码';
-COMMENT ON COLUMN dividion_view.province IS '省级名称';
-COMMENT ON COLUMN dividion_view."cityCode" IS '地市级代码';
-COMMENT ON COLUMN dividion_view.city IS '地市级名称';
-COMMENT ON COLUMN dividion_view."areaCode" IS '区县级代码';
-COMMENT ON COLUMN dividion_view.area IS '区县级名称';
-COMMENT ON COLUMN dividion_view."streetCode" IS '乡镇、街道级代码';
-COMMENT ON COLUMN dividion_view.street IS '乡镇、街道级名称';
-COMMENT ON COLUMN dividion_view.village IS '村级名称';
-COMMENT ON COLUMN dividion_view.address IS '详细地址';
+			 ((((base_dividion_village v LEFT JOIN base_dividion_province p ON v."provinceCode" = p.code)
+					 LEFT JOIN base_dividion_city c ON v."cityCode" = c.code)
+					 LEFT JOIN base_dividion_area a ON v."areaCode" = a.code)
+					 LEFT JOIN base_dividion_street s ON v."streetCode" = s.code);
+COMMENT ON VIEW base_dividion_view IS '中华人民共和国五级行政区划视图';
+COMMENT ON COLUMN base_dividion_view.code IS '完整行政区划代码';
+COMMENT ON COLUMN base_dividion_view."provinceCode" IS '省级代码';
+COMMENT ON COLUMN base_dividion_view.province IS '省级名称';
+COMMENT ON COLUMN base_dividion_view."cityCode" IS '地市级代码';
+COMMENT ON COLUMN base_dividion_view.city IS '地市级名称';
+COMMENT ON COLUMN base_dividion_view."areaCode" IS '区县级代码';
+COMMENT ON COLUMN base_dividion_view.area IS '区县级名称';
+COMMENT ON COLUMN base_dividion_view."streetCode" IS '乡镇、街道级代码';
+COMMENT ON COLUMN base_dividion_view.street IS '乡镇、街道级名称';
+COMMENT ON COLUMN base_dividion_view.village IS '村级名称';
+COMMENT ON COLUMN base_dividion_view.address IS '详细地址';
 
-DROP VIEW IF EXISTS domicile_view;
-CREATE VIEW domicile_view AS
+DROP VIEW IF EXISTS base_domicile_view;
+CREATE VIEW base_domicile_view AS
 	SELECT
 				 a.code,
 				 a."provinceCode",
@@ -121,20 +124,17 @@ CREATE VIEW domicile_view AS
 						 (p.name || c.name || '公安局' || a.name || '分局')
 						 END) AS domicile
 	FROM
-			 ((dividion_area a LEFT JOIN dividion_province p ON a."provinceCode" = p.code)
-					 LEFT JOIN dividion_city c ON a."cityCode" = c.code);
-COMMENT ON VIEW domicile_view IS '中华人民共和国三级行政区划视图';
-COMMENT ON COLUMN domicile_view.code IS '完整行政区划代码';
-COMMENT ON COLUMN domicile_view."provinceCode" IS '省级代码';
-COMMENT ON COLUMN domicile_view.province IS '省级名称';
-COMMENT ON COLUMN domicile_view."cityCode" IS '地市级代码';
-COMMENT ON COLUMN domicile_view.city IS '地市级名称';
-COMMENT ON COLUMN domicile_view.area IS '区县级名称';
-COMMENT ON COLUMN domicile_view.domicile IS '户籍所在地';
+			 ((base_dividion_area a LEFT JOIN base_dividion_province p ON a."provinceCode" = p.code)
+					 LEFT JOIN base_dividion_city c ON a."cityCode" = c.code);
+COMMENT ON VIEW base_domicile_view IS '中华人民共和国三级行政区划视图';
+COMMENT ON COLUMN base_domicile_view.code IS '完整行政区划代码';
+COMMENT ON COLUMN base_domicile_view."provinceCode" IS '省级代码';
+COMMENT ON COLUMN base_domicile_view.province IS '省级名称';
+COMMENT ON COLUMN base_domicile_view."cityCode" IS '地市级代码';
+COMMENT ON COLUMN base_domicile_view.city IS '地市级名称';
+COMMENT ON COLUMN base_domicile_view.area IS '区县级名称';
+COMMENT ON COLUMN base_domicile_view.domicile IS '户籍所在地';
 
-/**
- # 判断给定参数所代表的年是否为闰年
- */
 DROP FUNCTION IF EXISTS func_is_leap_year(INTEGER);
 CREATE OR REPLACE FUNCTION func_is_leap_year(IN year INTEGER) RETURNS BOOLEAN
 AS $$
@@ -146,10 +146,8 @@ BEGIN
 	END IF;
 END;
 $$ LANGUAGE plpgsql;
+COMMENT ON FUNCTION func_is_leap_year(INTEGER) IS '判断给定参数所代表的年是否为闰年';
 
-/**
- # 判断给定参数所代表的年范围里面有多少个闰年
- */
 DROP FUNCTION IF EXISTS func_have_leap_year(INTEGER, INTEGER);
 CREATE OR REPLACE FUNCTION func_have_leap_year(IN start_year INTEGER, end_year INTEGER) RETURNS INTEGER
 AS $$
@@ -176,10 +174,8 @@ BEGIN
 	RETURN num;
 END;
 $$ LANGUAGE plpgsql;
+COMMENT ON FUNCTION func_have_leap_year(INTEGER, INTEGER) IS '判断给定参数所代表的年范围里面有多少个闰年';
 
-/**
- # 身份证号码校验
- */
 DROP FUNCTION IF EXISTS func_verificate_card_number(VARCHAR);
 CREATE OR REPLACE FUNCTION func_verificate_card_number(IN card VARCHAR) RETURNS JSON
 AS $$
@@ -197,7 +193,7 @@ BEGIN
 		sum := sum + substr(card, i, 1)::INTEGER * w_key[i];
 	END LOOP;
 	last_key := c_key[sum % 11 + 1];
-	SELECT domicile, province, city, area INTO police, province_name, city_name, area_name FROM domicile_view WHERE code = substr(card, 1, 6)::INTEGER;
+	SELECT domicile, province, city, area INTO police, province_name, city_name, area_name FROM base_domicile_view WHERE code = substr(card, 1, 6)::INTEGER;
 	RETURN json_build_object(
 			'type', CASE WHEN (substr(card, 18, 1) =  last_key) THEN 'Success' ELSE 'Error' END,
 			'card', CASE WHEN (length(card) = 17) THEN card || last_key ELSE substr(card, 1, 17) || last_key END,
@@ -209,10 +205,8 @@ BEGIN
 	) ;
 END;
 $$ LANGUAGE plpgsql;
+COMMENT ON FUNCTION func_verificate_card_number(VARCHAR) IS '身份证号码校验自定义函数';
 
-/**
- # 随机概率函数
- */
 DROP FUNCTION IF EXISTS func_random_percent(JSON);
 CREATE OR REPLACE FUNCTION func_random_percent(IN percents JSON) RETURNS JSON
 AS $$
@@ -229,10 +223,8 @@ BEGIN
 	RETURN json_build_object('id', random.id, 's', random.S, 'r', random.R, 'label', random.label);
 END;
 $$ LANGUAGE plpgsql;
+COMMENT ON FUNCTION func_random_percent(JSON) IS '随机概率自定义函数';
 
-/**
- # 按需生成一个虚拟个人信息存储过程逻辑
- */
 DROP FUNCTION IF EXISTS logic_build_people(JSON);
 CREATE OR REPLACE FUNCTION logic_build_people(IN people JSON) RETURNS JSON
 AS $$
@@ -483,13 +475,13 @@ BEGIN
 	END IF;
 	CASE
 		WHEN (length(default_dividion::VARCHAR) >=2 AND length(default_dividion::VARCHAR) < 4) THEN
-		SELECT code, "areaCode" INTO stree, dividion FROM dividion_street WHERE "provinceCode" = substr(default_dividion, 1, 2) ORDER BY random() LIMIT 1;
+		SELECT code, "areaCode" INTO stree, dividion FROM base_dividion_street WHERE "provinceCode" = substr(default_dividion, 1, 2) ORDER BY random() LIMIT 1;
 		WHEN (length(default_dividion::VARCHAR) >=4 AND length(default_dividion::VARCHAR) < 6) THEN
-		SELECT code, "areaCode" INTO stree, dividion FROM dividion_street WHERE "cityCode" = substr(default_dividion, 1, 4) ORDER BY random() LIMIT 1;
+		SELECT code, "areaCode" INTO stree, dividion FROM base_dividion_street WHERE "cityCode" = substr(default_dividion, 1, 4) ORDER BY random() LIMIT 1;
 		WHEN (length(default_dividion::VARCHAR) >=6) THEN
-		SELECT code, "areaCode" INTO stree, dividion FROM dividion_street WHERE "areaCode" = substr(default_dividion, 1, 6) ORDER BY random() LIMIT 1;
+		SELECT code, "areaCode" INTO stree, dividion FROM base_dividion_street WHERE "areaCode" = substr(default_dividion, 1, 6) ORDER BY random() LIMIT 1;
 	ELSE
-		SELECT code, "areaCode" INTO stree, dividion FROM dividion_street ORDER BY random() LIMIT 1;
+		SELECT code, "areaCode" INTO stree, dividion FROM base_dividion_street ORDER BY random() LIMIT 1;
 	END CASE;
 	verificate := func_verificate_card_number(dividion || to_char(birthday, 'YYYYMMDD') || substr(stree::varchar, 8, 2) || gender);
 	RETURN json_build_object(
@@ -509,3 +501,4 @@ BEGIN
 	);
 END;
 $$ LANGUAGE plpgsql;
+COMMENT ON FUNCTION logic_build_people(JSON) IS '按需生成一个虚拟个人信息的操作';

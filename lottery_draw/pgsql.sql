@@ -116,12 +116,6 @@ COMMENT ON COLUMN base_lottery_log_view.lottery_id IS '奖项ID';
 COMMENT ON COLUMN base_lottery_log_view.label IS '获奖奖项名称';
 COMMENT ON COLUMN base_lottery_log_view.datetime IS '获奖时间';
 
-/**
- # 抽奖逻辑
- ```sql
- SELECT logic_lottery(floor(random() * 999999)::INTEGER);
- ```
- */
 DROP FUNCTION IF EXISTS logic_lottery(INTEGER);
 CREATE OR REPLACE FUNCTION logic_lottery(IN people INTEGER) RETURNS JSON
 AS $$
@@ -179,3 +173,4 @@ BEGIN
 	RETURN json_build_object('type', 'Error', 'message', '抽奖失败!请不要重复抽奖', 'error', replace(SQLERRM, '"', '`'), 'sqlstate', SQLSTATE);
 END;
 $$ LANGUAGE plpgsql;
+COMMENT ON FUNCTION logic_lottery(INTEGER) IS '抽奖逻辑';

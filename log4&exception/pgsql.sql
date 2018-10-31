@@ -1,23 +1,23 @@
 CREATE TABLE base_log4php (
-	"id" SERIAL8,
-	timestamp TIMESTAMP,
+	id SERIAL8,
+	timestamp TIMESTAMP(3) WITHOUT TIME ZONE,
 	logger VARCHAR(256),
 	level VARCHAR(32),
 	message TEXT,
 	thread INTEGER,
 	file VARCHAR(255),
 	line VARCHAR(10),
-	PRIMARY KEY ("id")
+	PRIMARY KEY (id)
 );
-COMMENT ON TABLE public.base_log4php IS 'PHP开发日志记录';
-COMMENT ON COLUMN public.base_log4php.id IS '自增主键';
-COMMENT ON COLUMN public.base_log4php.timestamp IS '数据变动时间';
-COMMENT ON COLUMN public.base_log4php.logger IS '日志记录者';
-COMMENT ON COLUMN public.base_log4php.level IS '日志级别';
-COMMENT ON COLUMN public.base_log4php.message IS '日志消息';
-COMMENT ON COLUMN public.base_log4php.thread IS '日志路线';
-COMMENT ON COLUMN public.base_log4php.file IS '日志生成文件';
-COMMENT ON COLUMN public.base_log4php.line IS '日志生成行数';
+COMMENT ON TABLE base_log4php IS 'PHP开发日志记录';
+COMMENT ON COLUMN base_log4php.id IS '自增主键';
+COMMENT ON COLUMN base_log4php.timestamp IS '数据变动时间';
+COMMENT ON COLUMN base_log4php.logger IS '日志记录者';
+COMMENT ON COLUMN base_log4php.level IS '日志级别';
+COMMENT ON COLUMN base_log4php.message IS '日志消息';
+COMMENT ON COLUMN base_log4php.thread IS '日志路线';
+COMMENT ON COLUMN base_log4php.file IS '日志生成文件';
+COMMENT ON COLUMN base_log4php.line IS '日志生成行数';
 
 CREATE TABLE base_exception(
 	id          SERIAL8,
@@ -39,28 +39,28 @@ CREATE TABLE base_exception(
 	action      VARCHAR(100)    NULL,
 	model       VARCHAR(100)    NULL,
 	dateline    TIMESTAMP(3) WITHOUT TIME ZONE NOT NULL DEFAULT now(),
-	PRIMARY KEY ("id")
+	PRIMARY KEY (id)
 );
-COMMENT ON TABLE public.base_exception IS '异常捕获';
-COMMENT ON COLUMN public.base_exception.id IS '自增主键';
-COMMENT ON COLUMN public.base_exception.type IS '异常类型';
-COMMENT ON COLUMN public.base_exception.code IS '异常状态编码';
-COMMENT ON COLUMN public.base_exception.title IS '异常标题';
-COMMENT ON COLUMN public.base_exception.message IS '异常说明';
-COMMENT ON COLUMN public.base_exception.file IS '异常出现的文件';
-COMMENT ON COLUMN public.base_exception.line IS '异常文件出现的行数';
-COMMENT ON COLUMN public.base_exception.trace IS '异常请求Trace';
-COMMENT ON COLUMN public.base_exception.header IS '异常请求headers';
-COMMENT ON COLUMN public.base_exception.host IS '异常请求主机';
-COMMENT ON COLUMN public.base_exception.url IS '异常请求URL';
-COMMENT ON COLUMN public.base_exception.method IS '异常请求类型';
-COMMENT ON COLUMN public.base_exception.ip IS '异常请求IP';
-COMMENT ON COLUMN public.base_exception.request IS '异常请求数据';
-COMMENT ON COLUMN public.base_exception.module IS '异常请求模块';
-COMMENT ON COLUMN public.base_exception.controller IS '异常请求控制器';
-COMMENT ON COLUMN public.base_exception.action IS '异常请求方法';
-COMMENT ON COLUMN public.base_exception.model IS '异常请求模型';
-COMMENT ON COLUMN public.base_exception.dateline IS '异常请求时间';
+COMMENT ON TABLE base_exception IS '异常捕获';
+COMMENT ON COLUMN base_exception.id IS '自增主键';
+COMMENT ON COLUMN base_exception.type IS '异常类型';
+COMMENT ON COLUMN base_exception.code IS '异常状态编码';
+COMMENT ON COLUMN base_exception.title IS '异常标题';
+COMMENT ON COLUMN base_exception.message IS '异常说明';
+COMMENT ON COLUMN base_exception.file IS '异常出现的文件';
+COMMENT ON COLUMN base_exception.line IS '异常文件出现的行数';
+COMMENT ON COLUMN base_exception.trace IS '异常请求Trace';
+COMMENT ON COLUMN base_exception.header IS '异常请求headers';
+COMMENT ON COLUMN base_exception.host IS '异常请求主机';
+COMMENT ON COLUMN base_exception.url IS '异常请求URL';
+COMMENT ON COLUMN base_exception.method IS '异常请求类型';
+COMMENT ON COLUMN base_exception.ip IS '异常请求IP';
+COMMENT ON COLUMN base_exception.request IS '异常请求数据';
+COMMENT ON COLUMN base_exception.module IS '异常请求模块';
+COMMENT ON COLUMN base_exception.controller IS '异常请求控制器';
+COMMENT ON COLUMN base_exception.action IS '异常请求方法';
+COMMENT ON COLUMN base_exception.model IS '异常请求模型';
+COMMENT ON COLUMN base_exception.dateline IS '异常请求时间';
 
 CREATE OR REPLACE FUNCTION logic_exception(
 	IN exceptions JSON
@@ -154,7 +154,7 @@ BEGIN
 	IF (json_extract_path_text(exceptions, 'model') IS NOT NULL) THEN
 		model_val := json_extract_path_text(exceptions, 'model');
 	END IF;
-	INSERT INTO public.base_exception("type", "code", "title", "message", "file", "line", "trace", "header", "host",
+	INSERT INTO base_exception("type", "code", "title", "message", "file", "line", "trace", "header", "host",
 																					"url", "method", "ip", "request", "module", "controller", "action", "model")
 	VALUES (type_val, code_val, title_val, message_val, file_val, line_val, trace_val, header_val, host_val,
 					url_val, method_val, ip_val, request_val, module_val, controller_val, action_val, model_val);
@@ -166,3 +166,4 @@ BEGIN
 	RETURN json_build_object('type', 'Error', 'msg', '异常捕获操作失败!', 'error', replace(SQLERRM, '"', '`'), 'sqlstate', SQLSTATE);
 END;
 $$ LANGUAGE plpgsql;
+COMMENT ON FUNCTION logic_exception(JSON) IS '异常捕获操作';
